@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/TheBarberAdmin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.ftpquota" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.rnd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/NodeProduction-0.pid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/AdminSetting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/AppNotification.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Booking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Coupon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Currency.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Employee.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Gallery.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/ConfirmPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/BannerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/CouponController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/LanguageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/ModuleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/NotificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/OfferController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/ReportController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/ReviewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/SalonController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/SalonOwnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/SettingController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/admin/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/api/AdminApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/api/EmployeeApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/api/UserApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/BookingController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/CalendarController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/EmployeeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/GalleryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/ReportController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/ReviewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/SalonController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/SalonOwnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/ServiceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/SettingController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Controllers/owner/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/Localization.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Http/Middleware/owner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Language.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/AppCreateAppointment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/BookingStatus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/CreateAppointment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/EmpAppCreateAppointment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/EmpBookingStatus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/ForgetPassword.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/OTP.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Mail/Welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Module.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Notification.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Offer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/PaymentSetting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Review.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Salon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/Template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/cors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/laravel_google_translate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/onesignal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/cors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/license/includes/lb_helper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/license/includes/thebarber.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/license/installer/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/file/English.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/argon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/jquery.timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/loginStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/mystyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/nucleo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/css/sweetalert2.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo/nucleo-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo/nucleo-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo/nucleo-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo/nucleo-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/fonts/nucleo/nucleo-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/Chart.extension.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/argon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/jquery-scrollLock.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/jquery.scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/jquery.timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/myjavascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/js/sweetalert.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/includes/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/Arabic.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/English.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/banner/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/banner/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/banner/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/category/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/category/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/coupon/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/coupon/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/coupon/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/language/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/login/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/mail/userVerificationMail.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/module/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/notification/send.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/notification/template.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/offer/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/offer/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/offer/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/banner.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/category.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/coupon.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/language.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/module.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/offer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/profile.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/review.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/salon.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/salonowner.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/settings.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/pages/user.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/report/revenue.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/report/salonrevenue.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/report/userReport.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/review/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/salon owner/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/salon/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/admin/users/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/auth/verify.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/layouts/appLogin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/layouts/navbar.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/layouts/sidebar.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/layouts/top-header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/booking/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/booking/invoice.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/booking/invoicePrint.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/booking/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/employee/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/employee/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/employee/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/gallery/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/gallery/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/login/forgetPassword.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/login/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/login/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/booking.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/calendar.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/employee.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/gallery.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/profile.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/review.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/service.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/settings.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/pages/user.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/report/revenueReport.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/report/userReport.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/review/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/salon/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/salon/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/service/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/service/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/service/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/user/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/owner/user/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBarberAdmin/webpack.mix.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/progcode/laravel-fullcalendar" />
+      <path value="$PROJECT_DIR$/vendor/grpc/grpc" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/stichoza/google-translate-php" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/zanysoft/laravel-zip" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/rize/uri-template" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/google/cloud-translate" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/google/cloud-core" />
+      <path value="$PROJECT_DIR$/vendor/google/common-protos" />
+      <path value="$PROJECT_DIR$/vendor/google/protobuf" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/vendor/google/gax" />
+      <path value="$PROJECT_DIR$/vendor/google/grpc-gcp" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/tanmuhittin/laravel-google-translate" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/yandex/translate-api" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/berkayk/onesignal-laravel" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/twilio/sdk" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="21bCXyswu8vSIEEaHZ699RAB8Ja" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/owner/pages" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner\pages" />
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner" />
+      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\owner" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="" />
+      <created>1638200443866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638200443866</updated>
+      <workItem from="1638200445334" duration="8544000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1638208257195">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1638208257195" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1638201188693">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1638201188693" />
+    <state x="0" y="0" width="585" height="720" key="find.popup" timestamp="1638206352579">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="0" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206352579" />
+    <state x="339" y="160" key="run.anything.popup" timestamp="1638206751785">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206751785" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638208231493">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638208231493" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php</url>
+          <line>87</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\owner\ProductController" />
+            <option name="methodName" value="update" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/owner/product/create.blade.php</url>
+          <line>82</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/owner/EmployeeController.php</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
