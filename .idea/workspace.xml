@@ -20,14 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,16 +203,18 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/owner/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\admin" />
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin\pages" />
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner\pages" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner" />
-      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\owner" />
     </key>
   </component>
   <component name="RunManager">
@@ -228,7 +232,8 @@
       <option name="presentableId" value="Default" />
       <updated>1638200443866</updated>
       <workItem from="1638200445334" duration="8652000" />
-      <workItem from="1638242253001" duration="2192000" />
+      <workItem from="1638242253001" duration="2296000" />
+      <workItem from="1638285338530" duration="1882000" />
     </task>
     <servers />
   </component>
@@ -260,25 +265,25 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="244" y="0" width="585" height="720" key="find.popup" timestamp="1638242985346">
+    <state x="244" y="0" width="585" height="720" key="find.popup" timestamp="1638286174513">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="244" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638242985346" />
+    <state x="244" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638286174513" />
     <state x="339" y="160" key="run.anything.popup" timestamp="1638206751785">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206751785" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638243745954">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638286829346">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638243745954" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638286829346" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php</url>
-          <line>141</line>
+          <line>135</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\owner\ProductController" />
             <option name="methodName" value="update" />
@@ -287,7 +292,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/owner/product/create.blade.php</url>
-          <line>82</line>
+          <line>68</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

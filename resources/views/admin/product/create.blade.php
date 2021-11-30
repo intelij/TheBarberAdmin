@@ -4,7 +4,7 @@
 @include('layouts.top-header', [
     'title' => __('Create') ,
     'headerData' => __('Product') ,
-    'url' => 'owner/product' ,
+    'url' => 'admin/product' ,
     'class' => 'col-lg-7'
 ])
 
@@ -24,7 +24,7 @@
                             </li>
                         </ul>
                     </div>
-                    <form class="form-horizontal form" action="{{url('/owner/product/store')}}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal form" action="{{url('/admin/product/store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                         <div class="card shadow">
                             <div class="my-0 mx-auto w-75">
@@ -51,6 +51,20 @@
                                                         <div class="invalid-div">{{ $message }}</div>
                                                     @enderror
                                                 </div>
+
+                                                {{-- Salon --}}
+                                                <div class="form-group">
+                                                    <label class="form-control-label">{{__('Salon')}}</label>
+                                                    <select class="form-control select2" name="salon_id" id="salon_id" data-placeholder='{{ __("-- Select Salon --")}}' placeholder='{{ __("-- Select Salon --")}}' >
+                                                        @foreach ($salons as $salon)
+                                                            <option  value="{{$salon->salon_id}}" {{ old('salon_id') == $salon->salon_id? 'selected':'' }}>{{$salon->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    @error('salon_id')
+                                                        <div class="invalid-div">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+
 
                                                 {{-- Category --}}
                                                 <div class="form-group">

@@ -1,26 +1,28 @@
 <?php
 
-namespace App\Http\Controllers\owner;
+namespace App\Http\Controllers\admin;
 
 use App\Category;
+use App\Employee;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\ProductImage;
 use App\Salon;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 
 
 class ProductController extends Controller
 {
     public function index(){
-        $salon = Salon::where('owner_id', Auth()->user()->id)->first();
-        $products = Product::where('salon_id', $salon->salon_id)->orderBy('id','desc')->paginate(10);
-        return view('owner.pages.product', compact('products'));
+        $products = Product::orderBy('id','desc')->paginate(10);
+        return view('admin.pages.product', compact('products'));
     }
 
     public function create(){
+        $salons = Salon::all();
         $categories = Category::all();
-        return view('owner.product.create', compact('categories'));
+        return view('admin.product.create', compact('salons','categories'));
     }
 
     public function store(Request $request){
@@ -28,11 +30,12 @@ class ProductController extends Controller
             'title' => 'bail|required',
             'description' => 'bail|required',
             'category_id' => 'bail|required',
+            'salon_id' => 'bail|required',
             'price' => 'bail|required',
             'quantity' => 'bail|required',
             'image' => 'bail|required',
         ]);
-        $salon = Salon::where('owner_id', Auth()->user()->id)->first();
+
         $image_name = '';
         if($request->hasFile('image'))
         {
@@ -46,7 +49,7 @@ class ProductController extends Controller
         $product = new Product();
         $product->title = $request->title;
         $product->description = $request->description;
-        $product->salon_id = $salon->salon_id;
+        $product->salon_id = $request->salon_id;
         $product->category_id = $request->category_id;
         $product->is_active = $request->is_active;
         $product->price = $request->price;
@@ -59,7 +62,7 @@ class ProductController extends Controller
         $product_image->image_position = 1;
         $product_image->save();
 
-        return redirect('/owner/product');
+        return redirect('/admin/product');
 
     }
 
@@ -84,11 +87,12 @@ class ProductController extends Controller
     }
 
     public function edit($id){
+        $salons = Salon::all();
         $categories = Category::all();
         $product = Product::find($id);
         $image = $product->images[0];
 
-        return view('owner.product.edit', compact('categories', 'image', 'product'));
+        return view('admin.product.edit', compact('salons','categories', 'image', 'product'));
     }
 
 
@@ -97,6 +101,7 @@ class ProductController extends Controller
             'title' => 'bail|required',
             'description' => 'bail|required',
             'category_id' => 'bail|required',
+            'salon_id' => 'bail|required',
             'price' => 'bail|required',
             'quantity' => 'bail|required',
         ]);
@@ -118,19 +123,20 @@ class ProductController extends Controller
 
         $product->title = $request->title;
         $product->description = $request->description;
+        $product->salon_id = $request->salon_id;
         $product->category_id = $request->category_id;
         $product->is_active = $request->is_active;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
         $product->save();
 
-        return redirect('/owner/product');
+        return redirect('/admin/product');
     }
 
     public function show($id){
         $product = Product::find($id);
         $image = $product->images[0];
 
-        return view('owner.product.show', compact('image', 'product'));
+        return view('admin.product.show', compact('image', 'product'));
     }
 }

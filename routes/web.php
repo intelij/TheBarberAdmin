@@ -174,6 +174,16 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function()
     Route::get('/notification/send', 'admin\NotificationController@send');
     Route::post('/notification/store', 'admin\NotificationController@store');
 
+    // Product
+    Route::get('/product', 'admin\ProductController@index');
+    Route::get('/product/create', 'admin\ProductController@create');
+    Route::post('/product/store', 'admin\ProductController@store');
+    Route::post('/product/hideProduct', 'admin\ProductController@hideProduct');
+    Route::get('/product/edit/{id}', 'admin\ProductController@edit');
+    Route::post('/product/update/{id}', 'admin\ProductController@update');
+    Route::get('/product/{id}', 'admin\ProductController@show');
+    Route::get('/product/delete/{id}', 'admin\ProductController@destroy');
+
 });
 
 Route::prefix('owner')->middleware(['auth','owner'])->group(function()
