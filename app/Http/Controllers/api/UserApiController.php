@@ -100,7 +100,7 @@ class UserApiController extends Controller
             $data['verify'] = 1;
             $filtered = Arr::except($data, ['provider_token']);
             $filtered['email'] = $data['email'];
-            
+
             $user = User::where('email',$data['email'])->first();
             if($user)
             {
@@ -143,9 +143,9 @@ class UserApiController extends Controller
             }
         }
     }
-    
+
     // Register
-    public function register(Request $request) 
+    public function register(Request $request)
     {
         $request->validate([
             'name' => 'bail|required',
@@ -155,7 +155,7 @@ class UserApiController extends Controller
             'password' => 'bail|required|min:8',
             'referral_code'=> ['nullable','unique:users']
         ]);
-       
+
         $user_verify = AdminSetting::first()->user_verify;
         $user_verify_sms = AdminSetting::first()->user_verify_sms;
         $user_verify_email = AdminSetting::first()->user_verify_email;
@@ -175,8 +175,8 @@ class UserApiController extends Controller
                 'language' => $language
             ]
         );
-       
-        if($user) 
+
+        if($user)
         {
             $setting = AdminSetting::find(1);
             if(config('point.active') == 1){
@@ -204,7 +204,7 @@ class UserApiController extends Controller
                 $detail['UserName'] = $user->name;
                 $detail['AppName'] = AdminSetting::first()->app_name;
                 $mail_enable = AdminSetting::first()->mail;
-    
+
                 if($mail_enable){
                     try{
                         Mail::to($user->email)->send(new Welcome($content,$detail,$subject));
@@ -225,14 +225,14 @@ class UserApiController extends Controller
                 $detail['OTP'] = $otp;
                 $detail['AppName'] = AdminSetting::first()->app_name;
 
-                if($user_verify_sms ==1){                    
+                if($user_verify_sms ==1){
                     $sid = AdminSetting::first()->twilio_acc_id;
                     $token = AdminSetting::first()->twilio_auth_token;
                     $data = ["{{UserName}}", "{{OTP}}","{{AppName}}"];
                     $message1 = str_replace($data, $detail, $msg_content);
                     try{
                         $client = new Client($sid, $token);
-                        
+
                         $client->messages->create(
                             $user->code.$user->phone,
                             array(
@@ -242,7 +242,7 @@ class UserApiController extends Controller
                         );
                     }
                     catch(\Throwable $th){}
-                } 
+                }
                 if($user_verify_email== 1){
                     try{
                         Mail::to($user->email)->send(new OTP($content,$detail,$subject));
@@ -300,7 +300,7 @@ class UserApiController extends Controller
                         $message1 = str_replace($data, $detail, $msg_content);
                         try{
                             $client = new Client($sid, $token);
-                            
+
                             $client->messages->create(
                                 $user->code.$user->phone,
                                 array(
@@ -323,7 +323,7 @@ class UserApiController extends Controller
             return response()->json(['msg' => 'User not found', 'data' => null, 'success' => false], 200);
         }
     }
-    
+
     // Resend OTP
     public function resendotp(Request $request)
     {
@@ -368,7 +368,7 @@ class UserApiController extends Controller
                         $message1 = str_replace($data, $detail, $msg_content);
                         try{
                             $client = new Client($sid, $token);
-                            
+
                             $client->messages->create(
                                 $user->code.$user->phone,
                                 array(
@@ -406,7 +406,7 @@ class UserApiController extends Controller
             $user->verify = 1;
             $user->save();
 
-            
+
             $content = Template::where('title','Welcome')->first()->mail_content;
             $subject = Template::where('title','Welcome')->first()->subject;
             $detail['UserName'] = $user->name;
@@ -473,12 +473,12 @@ class UserApiController extends Controller
                 $sms_enable = AdminSetting::first()->sms;
                 if($mail_enable)
                 {
-                    try{                    
+                    try{
                         Mail::to($user->email)->send(new ForgetPassword($content,$detail,$subject));
                     }
                     catch(\Throwable $th){}
                 }
-                if($sms_enable == 1) 
+                if($sms_enable == 1)
                 {
                     $sid = AdminSetting::first()->twilio_acc_id;
                     $token = AdminSetting::first()->twilio_auth_token;
@@ -486,7 +486,7 @@ class UserApiController extends Controller
                     $message1 = str_replace($data, $detail, $msg_content);
                     try{
                         $client = new Client($sid, $token);
-                        
+
                         $client->messages->create(
                         $user->code.$user->phone,
                         array(
@@ -522,7 +522,7 @@ class UserApiController extends Controller
         $categories = Category::where([['status',1],['name','!=','Default Category']])->get();
         return response()->json(['msg' => 'Categories', 'data' => $categories, 'success' => true], 200);
     }
-    
+
     // Single Salon
     public function singleSalon($id)
     {
@@ -574,7 +574,7 @@ class UserApiController extends Controller
             }
             $img = $request->image;
             $img = str_replace('data:image/png;base64,', '', $img);
-            
+
             $img = str_replace(' ', '+', $img);
             $data1 = base64_decode($img);
             $name = "user_". time() . ".png";
@@ -586,7 +586,7 @@ class UserApiController extends Controller
         $user->save();
         return response()->json(['msg' => 'Edit User successfully', 'data' => $user, 'success' => true], 200);
     }
-    
+
     // add  address
     public function addUserAddress(Request $request)
     {
@@ -600,7 +600,7 @@ class UserApiController extends Controller
             'let' => 'bail|required',
             'long' => 'bail|required',
         ]);
-        
+
         $address->user_id = Auth()->user()->id;
         $address->street = $request->street;
         $address->city = $request->city;
@@ -624,7 +624,7 @@ class UserApiController extends Controller
         $address->delete();
         return response()->json(['msg' => 'address remove', 'success' => true], 200);
     }
-    
+
     // all coupons
     public function allCoupon()
     {
@@ -696,7 +696,7 @@ class UserApiController extends Controller
                 }
             }
         }
-        
+
         if(count($master) == 0)
         {
             return response()->json(['msg' => 'Day off', 'success' => false], 200);
@@ -717,13 +717,13 @@ class UserApiController extends Controller
             'date' => 'bail|required',
             'booking_at' => 'bail|required',
         ]);
-    
+
         $emp_array = array();
         $emps_all = Employee::where([['salon_id',$request->salon_id],['status',1],['give_service',$request->booking_at]])
         ->orWhere([['salon_id',$request->salon_id],['status',1],['give_service','Both']])
         ->get();
         $book_service = $request->service;
-        
+
         $duration = Service::whereIn('service_id', $book_service)->sum('time') - 1;
         foreach ($emps_all as $emp)
         {
@@ -744,17 +744,17 @@ class UserApiController extends Controller
         foreach($emps as $emp)
         {
             $employee = $emp->$day;
-           
+
             $start_time = new Carbon($request['date'].' '.$employee['open']);
             $end_time = new Carbon($request['date'].' '.$employee['close']);
             $end_time = $end_time->subMinutes(1);
-        
+
             if($time->between($start_time, $end_time))
             {
                 array_push($master,$emp);
             }
         }
-        
+
         $emps_final = array();
         foreach($master as $emp)
         {
@@ -783,7 +783,7 @@ class UserApiController extends Controller
 
         if(count($emps_final_1) > 0) {
             return response()->json(['msg' => 'Employees', 'data' => $emps_final_1, 'success' => true], 200);
-        } 
+        }
         else {
             return response()->json(['msg' => 'No employee available at this time', 'success' => false], 200);
         }
@@ -811,7 +811,7 @@ class UserApiController extends Controller
         $salon = Salon::find($request->salon_id);
         $book_service = json_encode($request->service_id);
         $duration = Service::whereIn('service_id', $request->service_id)->sum('time');
-        
+
         $start_time = new Carbon($request['date'].' '.$request['start_time']);
         $booking->end_time = $start_time->addMinutes($duration)->format('h:i A');
         $booking->salon_id = $request->salon_id;
@@ -821,7 +821,7 @@ class UserApiController extends Controller
         $booking->start_time = $request->start_time;
         $booking->date = $request->date;
         $booking->payment_type = $request->payment_type;
-        
+
         $booking->booking_at = $request->booking_at;
         if($request->booking_at == "Home"){
             $booking->extra_charges = $salon->home_charges;
@@ -831,7 +831,7 @@ class UserApiController extends Controller
             $booking->extra_charges = 0;
             $booking->address_id = null;
         }
-        
+
         if($request->payment_type == "STRIPE" || $request->payment_type == "ROZAR" || $request->payment_type == "PAYPAL")
         {
             $booking->payment_status = 1;
@@ -839,7 +839,7 @@ class UserApiController extends Controller
         if($request->payment_type == "STRIPE") {
             $paymentSetting = PaymentSetting::find(1);
             $stripe_sk = $paymentSetting->stripe_secret_key;
-    
+
             $adminSetting = AdminSetting::find(1);
             $currency =  $adminSetting->currency;
 
@@ -888,10 +888,10 @@ class UserApiController extends Controller
             $commission = $setting->commission_amount;
             $salon_income = $booking->payment - $commission;
         }
-        
+
         $booking->commission = $commission;
         $booking->salon_income = $salon_income;
-        
+
         if(config('point.active') == 1){
             $user = User::find(Auth::user()->id);
             if($setting->is_point == 1){
@@ -958,13 +958,13 @@ class UserApiController extends Controller
                     $schedule = null,
                     $create_appointment->subject
                 );
-                
+
             }
             catch (\Throwable $th) {}
         }
 
         $app_create_appointment = Template::where('title','App Create Appointment')->first();
-        
+
         $app_not = new AppNotification();
         $app_not->booking_id = $booking->id;
         $app_not->user_id = $booking->user_id;
@@ -1003,7 +1003,7 @@ class UserApiController extends Controller
         $emp_detail_app['BookingAt'] = $booking->booking_at;
         $emp_detail_app['BookingId'] = $booking->booking_id;
         $emp_detail_app['AppName'] = AdminSetting::first()->app_name;
-         
+
         $emp_app_data = ["{{EmployeeName}}", "{{UserName}}","{{Date}}","{{Time}}","{{SalonName}}","{{BookingAt}}","{{BookingId}}","{{AppName}}"];
         $emp_app_message = str_replace($emp_app_data, $emp_detail_app, $emp_app_create_appointment->msg_content);
         $emp_app_not->msg = $emp_app_message;
@@ -1037,7 +1037,7 @@ class UserApiController extends Controller
                 }
                 catch (\Throwable $th) {}
             }
-            
+
             if($booking->employee->device_token != null)
             {
                 try{
@@ -1094,7 +1094,7 @@ class UserApiController extends Controller
         $booking = Booking::find($id);
         $booking->booking_status = "Cancel";
         $booking->save();
-        
+
         $booking_status = Template::where('title','Booking status')->first();
 
         $not = new Notification();
@@ -1109,14 +1109,14 @@ class UserApiController extends Controller
         $detail['SalonName'] = $booking->salon->name;
         $detail['BookingStatus'] = $booking->booking_status;
         $detail['AppName'] = AdminSetting::first()->app_name;
-        
+
         $data = ["{{UserName}}", "{{Date}}","{{Time}}","{{BookingId}}","{{SalonName}}","{{BookingStatus}}"];
         $message = str_replace($data, $detail, $booking_status->msg_content);
 
         $not->msg = $message;
         $title = "Appointment ".$booking->booking_status;
         $not->save();
-        
+
         $mail_enable = AdminSetting::first()->mail;
         $notification_enable = AdminSetting::first()->notification;
 
@@ -1166,13 +1166,13 @@ class UserApiController extends Controller
         $emp_detail['BookingStatus'] = $booking->booking_status;
         $emp_detail['BookingId'] = $booking->booking_id;
         $emp_detail['AppName'] = AdminSetting::first()->app_name;
-        
+
         $data = ["{{EmployeeName}}", "{{UserName}}","{{Date}}","{{Time}}","{{SalonName}}","{{BookingAt}}","{{BookingStatus}}","{{BookingId}}","{{AppName}}"];
         $emp_message = str_replace($data, $emp_detail, $emp_booking_status->msg_content);
 
         $emp_not->msg = $emp_message;
         $title = "Appointment ".$booking->booking_status;
-        
+
         $emp_not->save();
         $owner_id = Salon::find($booking->salon_id)->owner_id;
         $owner = User::find($owner_id);
@@ -1212,11 +1212,11 @@ class UserApiController extends Controller
     {
         $request->validate([
             'salon_id' => 'bail|required',
-            'message' => 'bail|required', 
+            'message' => 'bail|required',
             'rate' => 'bail|required',
             'booking_id' => 'bail|required',
         ]);
-        
+
         $review = new Review();
         $review->user_id = Auth()->user()->id;
         $review->salon_id = $request->salon_id;
@@ -1254,7 +1254,7 @@ class UserApiController extends Controller
         $notification = Notification::where('user_id',Auth::user()->id)
         ->orderBy('id', 'desc')
         ->get();
-        
+
         return response()->json(['msg' => 'Notifications', 'data' => $notification, 'success' => true], 200);
     }
 
@@ -1301,7 +1301,7 @@ class UserApiController extends Controller
 
     // near by salon
     public function nearbySalon(Request $request)
-    { 
+    {
         $request->validate([
             'lat' => 'bail|required',
             'long' => 'bail|required',
@@ -1311,7 +1311,7 @@ class UserApiController extends Controller
         $lat= $request->lat;
         $long= $request->long;
         $radius = AdminSetting::find(1)->radius;
-      
+
         $results = DB::table('salon')
         ->select('salon_id','name', 'latitude', 'longitude', DB::raw(sprintf(
             '(6371 * acos(cos(radians(%1$.7f)) * cos(radians(latitude)) * cos(radians(longitude) - radians(%2$.7f)) + sin(radians(%1$.7f)) * sin(radians(latitude)))) AS distance',
@@ -1327,7 +1327,7 @@ class UserApiController extends Controller
                 array_push($arr, $q->salon_id);
             }
         }
-        
+
         $salon = Salon::whereIn('salon_id',$arr)->where('status', 1)->get();
         return response()->json(['msg' => 'Near by salon', 'data' => $salon, 'success' => true], 200);
     }
@@ -1353,7 +1353,7 @@ class UserApiController extends Controller
 
             $salon = Salon::where('status',1)->whereIn('salon_id',$ar)->get();
         }
-    
+
         $service = Service::where([['status',1],['name','like', '%' . $search . '%']])->first();
         if(isset($service))
         {

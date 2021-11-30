@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/UserApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/UserApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +195,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -233,7 +229,7 @@
       <updated>1638200443866</updated>
       <workItem from="1638200445334" duration="8652000" />
       <workItem from="1638242253001" duration="2296000" />
-      <workItem from="1638285338530" duration="1882000" />
+      <workItem from="1638285338530" duration="4773000" />
     </task>
     <servers />
   </component>
@@ -252,6 +248,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1638208257195">
       <screen x="0" y="0" width="1366" height="720" />
@@ -265,18 +264,18 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="244" y="0" width="585" height="720" key="find.popup" timestamp="1638286174513">
+    <state x="244" y="0" width="585" height="720" key="find.popup" timestamp="1638288755937">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="244" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638286174513" />
+    <state x="244" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638288755937" />
     <state x="339" y="160" key="run.anything.popup" timestamp="1638206751785">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206751785" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638286829346">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638289968340">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638286829346" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638289968340" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,6 +313,10 @@
           <url>file://$PROJECT_DIR$/resources/views/owner/product/show.blade.php</url>
           <line>21</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php</url>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

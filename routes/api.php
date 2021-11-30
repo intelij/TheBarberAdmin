@@ -46,6 +46,10 @@ Route::post('/search', 'api\UserApiController@search');
 
 Route::post('/bookingStatusPush', 'owner\BookingController@changeStatus');
 
+/* Saloon Product*/
+Route::get('/salon-product/{id}', 'admin\ProductController@apiProductList');
+Route::get('/product-details/{id}', 'admin\ProductController@apiProductDetails');
+
 
 Route::middleware('auth:api')->group(function()
 {
@@ -53,7 +57,7 @@ Route::middleware('auth:api')->group(function()
     Route::post('/profile/edit', 'api\UserApiController@editUser');
     Route::post('/profile/address/add', 'api\UserApiController@addUserAddress');
     Route::get('/profile/address/remove/{id}', 'api\UserApiController@removeUserAddress');
-    
+
     Route::post('/checkcoupon', 'api\UserApiController@checkCoupon');
 
     Route::post('/booking', 'api\UserApiController@booking');
@@ -68,7 +72,7 @@ Route::middleware('auth:api')->group(function()
 
     Route::get('/notification', 'api\UserApiController@notification');
     Route::get('/payment_gateway', 'api\UserApiController@payment_gateway');
-    
+
 });
 
 // Owner ---------------------------
@@ -84,7 +88,7 @@ Route::prefix('admin')->middleware(['auth:api'])->group(function()
     Route::get('/dashboard', 'api\AdminApiController@dashboard');
     Route::post('/editProfile', 'api\AdminApiController@editProfile');
     Route::get('/showProfile', 'api\AdminApiController@showProfile');
-    Route::post('/changePassword', 'api\AdminApiController@changePassword');  
+    Route::post('/changePassword', 'api\AdminApiController@changePassword');
 
     // Users
     Route::get('/clients', 'api\AdminApiController@clients');
@@ -97,7 +101,7 @@ Route::prefix('admin')->middleware(['auth:api'])->group(function()
     // Salon
     Route::get('/showSalon', 'api\AdminApiController@showSalon');
     Route::post('/editSalon', 'api\AdminApiController@editSalon');
-  
+
     // Employee
     Route::get('/employees', 'api\AdminApiController@employees');
     Route::get('/showEmployee/{id}', 'api\AdminApiController@showEmployee');
@@ -132,7 +136,7 @@ Route::prefix('admin')->middleware(['auth:api'])->group(function()
     Route::post('/addAppointment', 'api\AdminApiController@addAppointment');
     Route::get('/showAppointment/{id}', 'api\AdminApiController@showAppointment');
     Route::post('/changeStatus', 'api\AdminApiController@changeStatus');
-    
+
     Route::post('/selectEmp', 'api\AdminApiController@selectEmp');
     Route::post('/timeslot', 'api\AdminApiController@timeslot');
 

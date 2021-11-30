@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Category;
 use App\Employee;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ProductCollection;
+use App\Http\Resources\ProductResource;
 use App\Product;
 use App\ProductImage;
 use App\Salon;
@@ -18,6 +20,7 @@ class ProductController extends Controller
         $products = Product::orderBy('id','desc')->paginate(10);
         return view('admin.pages.product', compact('products'));
     }
+
 
     public function create(){
         $salons = Salon::all();
@@ -139,4 +142,21 @@ class ProductController extends Controller
 
         return view('admin.product.show', compact('image', 'product'));
     }
+
+    public function apiProductList($salon_id){
+        $products = Product::where('salon_id',$salon_id)->get();
+        $data = ProductResource::collection($products);
+        return response()->json(['msg' => 'Product list', 'data' => $data, 'success' => true], 200);
+    }
+
+    public function apiProductDetails($id){
+        $product = Product::find($id);
+        if($product) {
+            return response()->json(['msg' => 'Product details', 'data' => new ProductResource($product), 'success' => true], 200);
+        }
+        else{
+            return response()->json(['success' => false, 'message' => 'No product found']);
+        }
+    }
+
 }
