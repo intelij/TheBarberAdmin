@@ -25,14 +25,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    
+
         <!-- CSS -->
         <link href="{{ asset('includes/css/nucleo.css')}}" rel="stylesheet">
         <link href="{{ asset('includes/css/all.min.css')}}" rel="stylesheet">
         <link href="{{ asset('includes/css/sweetalert2.scss')}}">
         {{-- <link href="{{ asset('includes/css/bootstrap-wysihtml5.css')}}" rel="stylesheet"> --}}
         <link href="{{ asset('includes/css/jquery.timepicker.css')}}" rel="stylesheet">
-        
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
         @if (session('direction') == "rtl")
             <link href="{{ asset('includes/css/rtl.css')}}" rel="stylesheet">
         @endif
-        
+
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     </head>
@@ -64,10 +64,10 @@
                 </form>
                 @include('layouts.sidebar')
             @endauth
-            
+
             <div class="main-content">
                 @include('layouts.navbar')
-                
+
                 <?php $license_status = \App\AdminSetting::find(1)->license_status; ?>
                 @if ($license_status == 1 || Auth::user()->role == 2)
                     @yield('content')
@@ -97,7 +97,7 @@
 
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-            
+
             <script src="{{ asset('includes/js/Chart.min.js') }}"></script>
             <script src="{{ asset('includes/js/Chart.extension.js') }}"></script>
             <script src="{{ asset('includes/js/jquery.min.js') }}"></script>
@@ -111,27 +111,27 @@
             <script src="{{ asset('includes/js/jquery.timepicker.js') }}"></script>
 
 
-            <script src="{{asset('includes/js/map.js')}}"></script> 
+            <script src="{{asset('includes/js/map.js')}}"></script>
             <?php $mapkey = \App\AdminSetting::find(1)->mapkey; ?>
             <script src="https://maps.googleapis.com/maps/api/js?key={{$mapkey}}" async defer></script>
-    
+
             <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
             {{-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> --}}
             <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
-            
 
-            
+
+
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-            
+
             <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/datatables.min.js"> </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
             <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
             <script src="{{ asset('includes/js/myjavascript.js') }}"></script>
             @stack('js')
-            
+
             <!-- Argon JS -->
         @if (Request::url() != url('/owner/calendar'))
         </div>

@@ -293,5 +293,9 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     Route::get('/product/create', 'owner\ProductController@create');
     Route::post('/product/store', 'owner\ProductController@store');
     Route::post('/product/hideProduct', 'owner\ProductController@hideProduct');
+    Route::get('/product/edit/{id}', 'owner\ProductController@edit');
+    Route::post('/product/update/{id}', 'owner\ProductController@update');
+    Route::get('/product/{id}', 'owner\ProductController@show');
     Route::get('/product/delete/{id}', 'owner\ProductController@destroy');
+
 });

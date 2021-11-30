@@ -71,7 +71,7 @@
                                                     <label class="form-control-label">{{__('Category')}}</label>
                                                     <select class="form-control select2" name="category_id" id="category_id" data-placeholder='{{ __("-- Select Category --")}}' placeholder='{{ __("-- Select Category --")}}' >
                                                         @foreach ($categories as $category)
-                                                            <option  value="{{$category->cat_id}}" {{ old('salon_id') == $category->cat_id? 'selected':'' }}>{{$category->name}}</option>
+                                                            <option  value="{{$category->cat_id}}" {{ old('cat_id') == $category->cat_id? 'selected':'' }}>{{$category->name}}</option>
                                                         @endforeach
                                                     </select>
                                                     @error('category_id')

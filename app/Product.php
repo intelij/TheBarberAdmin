@@ -19,4 +19,8 @@ class Product extends Model
     public function images(){
         return $this->hasMany(ProductImage::class);
     }
+
+    public function getStatusAttribute(){
+        return $this->is_active == 1 ? "Active" : "In-active";
+    }
 }

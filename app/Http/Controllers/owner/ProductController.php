@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::orderBy('created_at')->paginate(10);
+        $products = Product::orderBy('id','desc')->paginate(10);
         return view('owner.pages.product', compact('products'));
     }
 
@@ -84,5 +84,59 @@ class ProductController extends Controller
         $product = Product::find($id);
         $images = ProductImage::where('product_id',$id)->delete();
         $product->delete();
+    }
+
+    public function edit($id){
+        $salons = Salon::all();
+        $categories = Category::all();
+        $product = Product::find($id);
+        $image = $product->images[0];
+
+        return view('owner.product.edit', compact('salons','categories', 'image', 'product'));
+    }
+
+
+    public function update(Request $request, $id){
+        $request->validate([
+            'title' => 'bail|required',
+            'description' => 'bail|required',
+            'category_id' => 'bail|required',
+            'salon_id' => 'bail|required',
+            'price' => 'bail|required',
+            'quantity' => 'bail|required',
+        ]);
+        $product = Product::find($id);
+
+        if($request->hasFile('image'))
+        {
+            $images = ProductImage::where('product_id',$id)->delete();
+            $image = $request->file('image');
+            $name = 'emp_'.time().'.'. $image->getClientOriginalExtension();
+            $destinationPath = public_path('/storage/images/product');
+            $image->move($destinationPath, $name);
+            $product_image = new ProductImage();
+            $product_image->image_url = $name;
+            $product_image->product_id = $product->id;
+            $product_image->image_position = 1;
+            $product_image->save();
+        }
+
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->salon_id = $request->salon_id;
+        $product->category_id = $request->category_id;
+        $product->is_active = $request->is_active;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
+        $product->save();
+
+        return redirect('/owner/product');
+    }
+
+    public function show($id){
+        $product = Product::find($id);
+        $image = $product->images[0];
+
+        return view('owner.product.show', compact('image', 'product'));
     }
 }
