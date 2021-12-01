@@ -73,6 +73,10 @@ Route::middleware('auth:api')->group(function()
     Route::get('/notification', 'api\UserApiController@notification');
     Route::get('/payment_gateway', 'api\UserApiController@payment_gateway');
 
+    Route::post('/checkout/{amount}', 'api\OrderController@stripe_payment');
+    Route::post('/order', 'api\OrderController@order');
+
+
 });
 
 // Owner ---------------------------
@@ -166,3 +170,4 @@ Route::prefix('employee')->middleware(['auth:empApi'])->group(function()
     Route::get('/notification', 'api\EmployeeApiController@notification');
     Route::get('/clearNotification', 'api\EmployeeApiController@clearNotification');
 });
+

@@ -22,11 +22,12 @@ class CreateOrdersTable extends Migration
             $table->text('state');
             $table->text('country');
             $table->text('payment_id');
-            $table->text('tracking_no');
+            $table->text('tracking_no')->nullable();
             $table->bigInteger('order_status_id')->default(1);
             $table->bigInteger('product_id');
             $table->bigInteger('price');
             $table->bigInteger('quantity');
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }

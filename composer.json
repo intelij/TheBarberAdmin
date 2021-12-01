@@ -20,7 +20,8 @@
         "stripe/stripe-php": "^7.67",
         "tanmuhittin/laravel-google-translate": "^2.0",
         "twilio/sdk": "^6.10",
-        "zanysoft/laravel-zip": "^1.0"
+        "zanysoft/laravel-zip": "^1.0",
+        "stripe/stripe-php": "^7.92"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

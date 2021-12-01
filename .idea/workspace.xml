@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/OrderCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/OrderResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/StripeInitiatePayment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_12_01_211525_create_stripe_initiate_payments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/UserApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/UserApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,6 +210,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\admin" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin\pages" />
@@ -229,7 +237,8 @@
       <updated>1638200443866</updated>
       <workItem from="1638200445334" duration="8652000" />
       <workItem from="1638242253001" duration="2296000" />
-      <workItem from="1638285338530" duration="4773000" />
+      <workItem from="1638285338530" duration="5798000" />
+      <workItem from="1638372587844" duration="4833000" />
     </task>
     <servers />
   </component>
@@ -256,6 +265,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1638208257195" />
+    <state x="463" y="115" key="FileChooserDialogImpl" timestamp="1638291532738">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="463" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1638291532738" />
     <state x="0" y="0" key="SettingsEditor" timestamp="1638201188693">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -272,10 +285,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206751785" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638289968340">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638376439761">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638289968340" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638376439761" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
