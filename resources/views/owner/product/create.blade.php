@@ -99,7 +99,7 @@
                                                 {{-- Image --}}
                                                 <div class="form-group">
                                                     <label class="form-control-label">{{__('Image')}}</label><br>
-                                                    <input type="file" id="image" name="image" accept="image/*" onchange="loadFile(event)" ><br>
+                                                    <input type="file" id="image" name="image[]" accept="image/*" multiple ><br>
                                                     <img id="output" class="h-25 w-25 mt-3"/>
                                                     @error('image')
                                                     <div class="invalid-div">{{ $message }}</div>

@@ -99,8 +99,7 @@
                                                     {{-- Image --}}
                                                     <div class="form-group">
                                                         <label class="form-control-label">{{__('Image')}}</label><br>
-                                                        <input type="file" id="image" name="image" accept="image/*" onchange="loadFile(event)" ><br>
-                                                        <img id="output" class="uploadprofileimg mt-3" src="{{asset('storage/images/product/'.$image->image_url)}}"/>
+                                                        <input type="file" id="image" name="image[]" accept="image/*" multiple><br>
                                                         @error('image')
                                                         <div class="invalid-div">{{ $message }}</div>
                                                         @enderror

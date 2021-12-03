@@ -175,7 +175,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function()
     Route::post('/notification/store', 'admin\NotificationController@store');
 
     // Product
-    Route::get('/product', 'admin\ProductController@index');
+    Route::get('/product', 'admin\ProductController@index')->name('admin.product');
     Route::get('/product/create', 'admin\ProductController@create');
     Route::post('/product/store', 'admin\ProductController@store');
     Route::post('/product/hideProduct', 'admin\ProductController@hideProduct');
@@ -299,7 +299,7 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     Route::post('/settings/update/{id}', 'owner\SettingController@update');
 
     // Product
-    Route::get('/product', 'owner\ProductController@index');
+    Route::get('/product', 'owner\ProductController@index')->name('owner.product');
     Route::get('/product/create', 'owner\ProductController@create');
     Route::post('/product/store', 'owner\ProductController@store');
     Route::post('/product/hideProduct', 'owner\ProductController@hideProduct');

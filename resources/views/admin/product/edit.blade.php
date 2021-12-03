@@ -56,7 +56,9 @@
                                                     <div class="form-group">
                                                         <label class="form-control-label">{{__('Salon')}}</label>
                                                         <select class="form-control select2" name="salon_id" id="salon_id" data-placeholder='{{ __("-- Select Salon --")}}' placeholder='{{ __("-- Select Salon --")}}' >
-                                                            @foreach ($salons as $salon)
+                                                            <option  value="{{$user_id}}" {{ $product->salon_id == $user_id? 'selected':'' }}>Own Product</option>
+
+                                                        @foreach ($salons as $salon)
                                                                 <option  value="{{$salon->salon_id}}" {{ $product->salon_id == $salon->salon_id? 'selected':'' }}>{{$salon->name}}</option>
                                                             @endforeach
                                                         </select>
@@ -113,8 +115,7 @@
                                                     {{-- Image --}}
                                                     <div class="form-group">
                                                         <label class="form-control-label">{{__('Image')}}</label><br>
-                                                        <input type="file" id="image" name="image" accept="image/*" onchange="loadFile(event)" ><br>
-                                                        <img id="output" class="uploadprofileimg mt-3" src="{{asset('storage/images/product/'.$image->image_url)}}"/>
+                                                        <input type="file" id="image" name="image[]" accept="image/*" multiple ><br>
                                                         @error('image')
                                                         <div class="invalid-div">{{ $message }}</div>
                                                         @enderror

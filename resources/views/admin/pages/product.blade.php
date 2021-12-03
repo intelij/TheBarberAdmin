@@ -15,12 +15,46 @@
                     <span class="h3">{{__('Product table')}}</span>
                     <button class="btn btn-primary addbtn float-right p-2"><a class="color-white" href="{{url('admin/product/create')}}"><i class="fas fa-plus mr-1"></i>{{__('Add New')}}</a></button>
                 </div>
+                    <div class="card-header border-0 text-center">
+                    <div class="row">
+                        <div class="col-4">
+                            <form method="get" action="{{route('admin.product')}}">
+                                <input type="hidden" value="{{$_GET['status'] ?? ""}}" name="status" />
+                                <div class="form-group">
+                                <select class="form-control" name="salon" id="salon" onchange="this.form.submit()">
+                                    <option value="">Select salon</option>
+                                    <option value="{{Auth::user()->id}}">Own product</option>
+                                    @foreach($salons as $salon)
+                                        <option value="{{$salon->salon_id}}">{{$salon->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="col-4">
+                            <form method="get"  action="{{route('admin.product')}}">
+                                <input type="hidden" value="{{$_GET['salon'] ?? ""}}" name="salon" />
+                                <div class="form-group">
+                                    <select class="form-control" name="status" id="status" onchange="this.form.submit()">
+                                        <option value="">Select product status</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">In-active</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-4">
+
+                        </div>
+                    </div>
+                </div>
                 <!-- table -->
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col" class="sort">{{__('#')}}</th>
+                            <th scope="col" class="sort">{{__('Image')}}</th>
                             <th scope="col" class="sort">{{__('Title')}}</th>
                             <th scope="col" class="sort">{{__('Category')}}</th>
                             <th scope="col" class="sort">{{__('Saloon')}}</th>
@@ -35,9 +69,10 @@
                             @foreach ($products as $key => $product)
                                 <tr>
                                     <th>{{$products->firstItem() + $key}}</th>
+                                    <th><img src="{{asset('storage/images/product/'.$product->images[0]->image_url)}}" style="width: 50px; height: 50px; " /></th>
                                     <td>{{$product->title}}</td>
                                     <td>{{$product->category->name??""}}</td>
-                                    <td>{{$product->salon->name??""}}</td>
+                                    <td>{{$product->salon->name??"Owner product"}}</td>
                                     <td>{{$product->price}}</td>
                                     <td>{{$product->quantity}}</td>
                                     <td>
@@ -79,5 +114,15 @@
       </div>
     </div>
 </div>
+<script>
+    $(document).ready(function (){
+        @if(isset($_GET['status']))
+            $("#status").val("{{$_GET['status']}}");
+        @endif
 
+        @if(isset($_GET['salon']))
+            $("#salon").val("{{$_GET['salon']}}");
+        @endif
+    })
+</script>
 @endsection
