@@ -59,6 +59,7 @@ class ProductController extends Controller
         $product->is_active = $request->is_active;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
+        $product->is_owner_product = $request->salon_id == Auth::user()->id ? true : false;
         $product->save();
 
         foreach($request->file('image') as $image){
@@ -143,6 +144,7 @@ class ProductController extends Controller
         $product->is_active = $request->is_active;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
+        $product->is_owner_product = $request->salon_id == Auth::user()->id ? true : false;
         $product->save();
 
         return redirect('/admin/product');

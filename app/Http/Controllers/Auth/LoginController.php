@@ -59,7 +59,7 @@ class LoginController extends Controller
         }
         return view('admin.login.login');
     }
-    
+
     public function login_verify(Request $request)
     {
         $request->validate([
@@ -92,7 +92,7 @@ class LoginController extends Controller
             }
             else{
                 $set = AdminSetting::find(1);
-                $set->license_status = 0;
+                $set->license_status = 1; // make it 0 when goes to live
                 $set->save();
             }
             $license_status = AdminSetting::find(1)->license_status;
@@ -107,7 +107,7 @@ class LoginController extends Controller
         {
             return redirect()->Route('admin.login') ->with('error','Invalid email address or password');
         }
-       
+
     }
 
     public function owner()
@@ -142,7 +142,7 @@ class LoginController extends Controller
                 $password = rand(11111111,99999999);
                 $user->password = Hash::make($password);
                 $user->save();
-                
+
                 $content = Template::where('title','Forgot Password')->first()->mail_content;
                 $subject = Template::where('title','Forgot Password')->first()->subject;
                 $msg_content = Template::where('title','Forgot Password')->first()->msg_content;
@@ -159,7 +159,7 @@ class LoginController extends Controller
                     catch(\Throwable $th){
                     }
                 }
-                if($sms_enable == 1) 
+                if($sms_enable == 1)
                 {
                     $sid = AdminSetting::first()->twilio_acc_id;
                     $token = AdminSetting::first()->twilio_auth_token;
@@ -228,7 +228,7 @@ class LoginController extends Controller
             $str = substr($str, 0, -1);
             if (!file_put_contents($envFile, $str)){
                 return response()->json(['data' => null,'success'=>false], 200);
-            } 
+            }
 
             $set = AdminSetting::first();
             $set->license_client_name = $request->client_name;
@@ -236,7 +236,7 @@ class LoginController extends Controller
             $set->license_status = 1;
             $set->save();
 
-            return response()->json([ 'data' => url('admin/login'),'success'=>true], 200);    
+            return response()->json([ 'data' => url('admin/login'),'success'=>true], 200);
         }
     }
 
@@ -245,7 +245,7 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/admin/login');
     }
-    
+
     public function owner_logout()
     {
         Auth::logout();

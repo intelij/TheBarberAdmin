@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->boolean('is_active')->default(true);
             $table->double('price');
             $table->bigInteger('quantity')->nullable();
+            $table->boolean('is_owner_product')->default(false);
             $table->timestamps();
         });
     }

@@ -297,6 +297,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('owner/market-place*')  ? 'active' : ''}}" href="{{url('owner/market-place')}}">
+                            <i class="fa fa-briefcase text-blue"></i>
+                            <span class="nav-link-text">{{ __('Market Place') }}</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('owner/settings*')  ? 'active' : ''}}" href="{{url('owner/settings')}}">
                             <i class="fa fa-cog text-green"></i>
                             <span class="nav-link-text">{{ __('Settings') }}</span>

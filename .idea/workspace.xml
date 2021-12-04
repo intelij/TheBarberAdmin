@@ -20,18 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/checkout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_212401_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_212401_create_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +205,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/owner/market_place" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -216,11 +215,11 @@
       <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner\market_place" />
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner" />
+      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\owner" />
       <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\admin" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin\pages" />
-      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin" />
-      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner\pages" />
-      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner" />
     </key>
   </component>
   <component name="RunManager">
@@ -243,7 +242,9 @@
       <workItem from="1638372587844" duration="5697000" />
       <workItem from="1638379066850" duration="168000" />
       <workItem from="1638459080316" duration="5566000" />
-      <workItem from="1638549687901" duration="4095000" />
+      <workItem from="1638549687901" duration="4252000" />
+      <workItem from="1638598381326" duration="2391000" />
+      <workItem from="1638623037760" duration="2874000" />
     </task>
     <servers />
   </component>
@@ -278,26 +279,26 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="463" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1638464781775" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1638201188693">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1638598521951">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1638201188693" />
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1638598521951" />
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1638242336368">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="244" y="0" width="585" height="720" key="find.popup" timestamp="1638549956431">
+    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638623757626">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="244" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638549956431" />
-    <state x="339" y="160" key="run.anything.popup" timestamp="1638206751785">
+    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638623757626" />
+    <state x="339" y="160" key="run.anything.popup" timestamp="1638600734853">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638206751785" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638551435715">
+    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638600734853" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638624745971">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638551435715" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638624745971" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

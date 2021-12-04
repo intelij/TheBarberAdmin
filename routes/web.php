@@ -308,4 +308,8 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     Route::get('/product/{id}', 'owner\ProductController@show');
     Route::get('/product/delete/{id}', 'owner\ProductController@destroy');
 
+    // Market place
+    Route::get('/market-place', 'owner\MarketPlaceController@index');
+    Route::any('/checkout/{id}', 'owner\MarketPlaceController@checkout')->name('checkout');
+
 });

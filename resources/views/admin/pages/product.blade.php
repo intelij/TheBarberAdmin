@@ -69,7 +69,7 @@
                             @foreach ($products as $key => $product)
                                 <tr>
                                     <th>{{$products->firstItem() + $key}}</th>
-                                    <th><img src="{{asset('storage/images/product/'.$product->images[0]->image_url)}}" style="width: 50px; height: 50px; " /></th>
+                                    <th><img src="{{$product->first_image}}" style="width: 50px; height: 50px; " /></th>
                                     <td>{{$product->title}}</td>
                                     <td>{{$product->category->name??""}}</td>
                                     <td>{{$product->salon->name??"Owner product"}}</td>
