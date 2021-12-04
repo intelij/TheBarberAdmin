@@ -184,6 +184,10 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function()
     Route::get('/product/{id}', 'admin\ProductController@show');
     Route::get('/product/delete/{id}', 'admin\ProductController@destroy');
 
+    // Product
+    Route::get('/orders', 'admin\OrderController@index')->name('admin_order');
+    Route::get('/order/{id}', 'admin\OrderController@show');
+    Route::get('/update-order-status/{id}/{status_id}', 'admin\OrderController@updateOrderStatus');
 });
 
 Route::prefix('owner')->middleware(['auth','owner'])->group(function()

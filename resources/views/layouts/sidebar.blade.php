@@ -146,6 +146,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('admin/orders*')  ? 'active' : ''}}" href="{{url('admin/orders')}}">
+                            <i class="fa fa-first-order text-blue"></i>
+                            <span class="nav-link-text">{{ __('Orders') }}</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('admin/report*')  ? 'active_text' : ''}}" href="#navbar-examples1" data-toggle="collapse"  aria-expanded=" {{ request()->is('admin/report*')  ? 'true' : ''}}" role="button" aria-controls="navbar-examples">
                             <i class="fa fa-file text-blue"></i>
                             <span class="nav-link-text">{{__('Reports')}}</span>

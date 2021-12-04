@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/checkout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_212401_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_212401_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +200,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/owner/market_place" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/order" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -215,11 +210,11 @@
       <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin\order" />
+      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\admin" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner\market_place" />
       <recent name="G:\laragon\www\TheBarberAdmin\resources\views\owner" />
       <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\owner" />
-      <recent name="G:\laragon\www\TheBarberAdmin\app\Http\Controllers\admin" />
-      <recent name="G:\laragon\www\TheBarberAdmin\resources\views\admin\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -279,6 +274,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="463" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1638464781775" />
+    <state x="490" y="62" key="RollbackChangesDialog" timestamp="1638626508285">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="490" y="62" key="RollbackChangesDialog/0.0.1366.720@0.0.1366.720" timestamp="1638626508285" />
     <state x="0" y="0" key="SettingsEditor" timestamp="1638598521951">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -287,18 +286,18 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638623757626">
+    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638636859726">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638623757626" />
+    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638636859726" />
     <state x="339" y="160" key="run.anything.popup" timestamp="1638600734853">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638600734853" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638624745971">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638636741368">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638624745971" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638636741368" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -25,9 +25,11 @@ class CreateOrdersTable extends Migration
             $table->text('tracking_no')->nullable();
             $table->bigInteger('order_status_id')->default(1);
             $table->bigInteger('product_id');
-            $table->bigInteger('price');
+            $table->bigInteger('unit_price');
+            $table->bigInteger('total_price')->nullable();
             $table->bigInteger('quantity');
             $table->bigInteger('user_id');
+            $table->boolean('is_admin_order')->default(false);
             $table->timestamps();
         });
     }
