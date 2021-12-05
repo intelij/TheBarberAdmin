@@ -29,6 +29,7 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('total_price')->nullable();
             $table->bigInteger('quantity');
             $table->bigInteger('user_id');
+            $table->bigInteger('salon_id');
             $table->boolean('is_admin_order')->default(false);
             $table->timestamps();
         });

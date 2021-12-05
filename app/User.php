@@ -19,7 +19,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    
+
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -40,15 +40,21 @@ class User extends Authenticatable
     {
         return url('storage/images/users') . '/';
     }
-    
+
     public function getSalonNameAttribute()
     {
         $salon =  Salon::where('owner_id', $this->attributes['id'])->first();
-        
+
         if(isset($salon)) {
             return $salon->name;
         } else {
             return '';
         }
+    }
+
+    public function getSalonIdAttribute()
+    {
+        $salon =  Salon::where('owner_id', $this->id)->first();
+        return $salon->salon_id;
     }
 }

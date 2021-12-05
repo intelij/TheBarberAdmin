@@ -94,7 +94,7 @@
                     <div class="card-body pt-0 pt-md-4">
                         <h3 class="text-center mb-5">Update order info</h3>
                         <div class="">
-                            <form method="post" action="{{route('update_order_status', $order->id)}}">
+                            <form method="post" action="{{route('owner_update_order_status', $order->id)}}">
                                 @csrf
                                 <div class="form-group">
                                     <label>Select status</label>

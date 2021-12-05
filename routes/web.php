@@ -316,4 +316,9 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     Route::get('/market-place', 'owner\MarketPlaceController@index');
     Route::any('/checkout/{id}', 'owner\MarketPlaceController@checkout')->name('checkout');
 
+    // Product
+    Route::get('/orders', 'owner\OrderController@index')->name('owner_order');
+    Route::get('/order/{id}', 'owner\OrderController@show');
+    Route::post('/update-order-status/{id}', 'owner\OrderController@updateOrderStatus')->name('owner_update_order_status');
+
 });

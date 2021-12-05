@@ -303,6 +303,14 @@
                         </a>
                     </li>
 
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('owner/orders*')  ? 'active' : ''}}" href="{{url('owner/orders')}}">
+                            <i class="fa fa-first-order text-blue"></i>
+                            <span class="nav-link-text">{{ __('Orders') }}</span>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('owner/market-place*')  ? 'active' : ''}}" href="{{url('owner/market-place')}}">
                             <i class="fa fa-briefcase text-blue"></i>
