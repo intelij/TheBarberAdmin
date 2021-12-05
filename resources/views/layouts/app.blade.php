@@ -13,6 +13,9 @@
                 --primary_color : <?php echo $color ?>;
                 --primary_color_hover : <?php echo $color.'cc' ?>;
             }
+            .hidden{
+                display: none;
+            }
         </style>
 
         <!-- Title -->

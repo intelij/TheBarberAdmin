@@ -187,7 +187,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function()
     // Product
     Route::get('/orders', 'admin\OrderController@index')->name('admin_order');
     Route::get('/order/{id}', 'admin\OrderController@show');
-    Route::get('/update-order-status/{id}/{status_id}', 'admin\OrderController@updateOrderStatus');
+    Route::post('/update-order-status/{id}', 'admin\OrderController@updateOrderStatus')->name('update_order_status');
 });
 
 Route::prefix('owner')->middleware(['auth','owner'])->group(function()
