@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/order/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +242,10 @@
       <workItem from="1638598381326" duration="2391000" />
       <workItem from="1638623037760" duration="2874000" />
       <workItem from="1638679851528" duration="6244000" />
-      <workItem from="1638710963333" duration="1782000" />
+      <workItem from="1638710963333" duration="1916000" />
+      <workItem from="1638714907919" duration="595000" />
+      <workItem from="1638804559029" duration="3421000" />
+      <workItem from="1638808288936" duration="1683000" />
     </task>
     <servers />
   </component>
@@ -297,10 +300,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638690301071" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638712666701">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638806940430">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638712666701" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638806940430" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,6 +354,11 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php</url>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/owner/pages/product.blade.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

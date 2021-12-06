@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\owner\MarketPlaceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -315,6 +316,10 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     // Market place
     Route::get('/market-place', 'owner\MarketPlaceController@index');
     Route::any('/checkout/{id}', 'owner\MarketPlaceController@checkout')->name('checkout');
+    Route::get('add-to-cart/{id}', [MarketPlaceController::class, 'addToCart'])->name('add.to.cart');
+    Route::get('cart', [MarketPlaceController::class, 'show_cart']);
+    Route::get('remove-from-cart/{id}', [MarketPlaceController::class, 'remove'])->name('remove.from.cart');
+    Route::patch('update-cart', [MarketPlaceController::class, 'update'])->name('update.cart');
 
     // Product
     Route::get('/orders', 'owner\OrderController@index')->name('owner_order');

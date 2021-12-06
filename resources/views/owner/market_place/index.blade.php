@@ -7,7 +7,14 @@
         ])
 
     <div class="container-fluid mt--6 mb-5">
-        @if (count($products) != 0)
+
+    @if(session('success_message'))
+            <div class="alert alert-success">
+                {{ session('success_message') }}
+            </div>
+        @endif
+
+    @if (count($products) != 0)
             <div class="row">
                 @foreach ($products as $key => $product)
                     <div class="col-4 mb-5">
@@ -31,7 +38,7 @@
                                     {{$product->description}}
                                 </p>
                                 <div class="text-center">
-                                    <a href="{{route('checkout',$product->id)}}" class="btn btn-primary">Purchase</a>
+                                    <a href="{{route('add.to.cart',$product->id)}}" class="btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>

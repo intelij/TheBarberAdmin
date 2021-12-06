@@ -224,6 +224,14 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('owner/cart')  ? 'active' : ''}}" href="{{url('owner/cart')}}">
+                            <i class="ni ni-cart text-teal"></i>
+                            <span class="nav-link-text">{{ __('Cart') }}</span>
+                            <span class="badge bg-secondary ml-2">{{count(session()->get('cart'))}}</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('owner/calendar*')  ? 'active' : ''}}" href="{{url('owner/calendar')}}">
                             <i class="ni ni-calendar-grid-58 text-pink"></i>
                             <span class="nav-link-text">{{ __('Calendar') }}</span>
