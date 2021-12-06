@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +241,7 @@
       <workItem from="1638710963333" duration="1916000" />
       <workItem from="1638714907919" duration="595000" />
       <workItem from="1638804559029" duration="3421000" />
-      <workItem from="1638808288936" duration="1683000" />
+      <workItem from="1638808288936" duration="4665000" />
     </task>
     <servers />
   </component>

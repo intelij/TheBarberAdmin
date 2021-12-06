@@ -315,7 +315,7 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
 
     // Market place
     Route::get('/market-place', 'owner\MarketPlaceController@index');
-    Route::any('/checkout/{id}', 'owner\MarketPlaceController@checkout')->name('checkout');
+    Route::any('/checkout', 'owner\MarketPlaceController@checkout')->name('checkout');
     Route::get('add-to-cart/{id}', [MarketPlaceController::class, 'addToCart'])->name('add.to.cart');
     Route::get('cart', [MarketPlaceController::class, 'show_cart']);
     Route::get('remove-from-cart/{id}', [MarketPlaceController::class, 'remove'])->name('remove.from.cart');

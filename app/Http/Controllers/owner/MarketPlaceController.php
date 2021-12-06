@@ -5,7 +5,8 @@ namespace App\Http\Controllers\owner;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
-use Stripe\Charge;
+use Stripe\Checkout\Session;
+use Stripe\PaymentIntent;
 use Stripe\Stripe;
 
 class MarketPlaceController extends Controller
@@ -15,20 +16,35 @@ class MarketPlaceController extends Controller
         return view('owner.market_place.index', compact('products'));
     }
 
-    public function checkout(Request $request, $id){
-        Stripe::setApiKey('sk_test_51K2yYvAwQFVC9X9FIJ6jlHmLoCDc4OGLIeUvGJTjeuZ42iOa4sTDgrDpzzg933A1ITUi09pwXsgdzpPpcyDrC1a100yIJLjLgp');
-        Charge::create ([
-            "amount" => 100 * 150,
-            "currency" => "inr",
-            "source" => $request->stripeToken,
-            "description" => "Making test payment."
+
+
+    public function checkout(Request $request){
+        \Stripe\Stripe::setApiKey('sk_test_51K2yYvAwQFVC9X9FIJ6jlHmLoCDc4OGLIeUvGJTjeuZ42iOa4sTDgrDpzzg933A1ITUi09pwXsgdzpPpcyDrC1a100yIJLjLgp');
+        $session = \Stripe\Checkout\Session::create([
+            'payment_method_types' => ['card'],
+            'line_items' => [
+                [
+                    'name' => "BBBB",
+                    'currency' => "USD",
+                    'amount' =>  10 * 100,
+                    'quantity' => 1,
+                ],  [
+                    'name' => "AAAA",
+                    'currency' => "USD",
+                    'amount' =>  20 * 100,
+                    'quantity' => 2,
+                ],  [
+                    'name' => "CCCCC",
+                    'currency' => "USD",
+                    'amount' =>  30 * 100,
+                    'quantity' => 3,
+                ]],
+            'mode' => 'payment',
+            'success_url' => 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+            'cancel_url' => 'https://example.com/cancel',
         ]);
 
-
-        return back();
-        $product = Product::find($id);
-        return view('owner.market_place.checkout', compact('product'));
-
+        return redirect( $session->url);
     }
 
     public function addToCart($id){
