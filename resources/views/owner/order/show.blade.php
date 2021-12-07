@@ -73,9 +73,6 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <p>Payment ID: {{$order->payment_id}}</p>
-                                </div>
-                                <div class="col-6">
                                     <p>Tracking no: {{$order->tracking_no}}</p>
                                 </div>
                             </div>

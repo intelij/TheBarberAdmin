@@ -18,6 +18,8 @@ class OrderController extends Controller
             $orders = $orders->where('order_status_id', $status);
         }
         $orders = $orders
+            ->where('order_status',1)
+            ->where("is_admin_order",0)
             ->where('salon_id', Auth::user()->salon_id)
             ->orderBy('orders.id','desc')
             ->paginate(25);

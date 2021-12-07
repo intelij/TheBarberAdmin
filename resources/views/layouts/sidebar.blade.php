@@ -227,7 +227,7 @@
                         <a class="nav-link {{ request()->is('owner/cart')  ? 'active' : ''}}" href="{{url('owner/cart')}}">
                             <i class="ni ni-cart text-teal"></i>
                             <span class="nav-link-text">{{ __('Cart') }}</span>
-                            <span class="badge bg-secondary ml-2">{{count(session()->get('cart'))}}</span>
+                            <span class="badge bg-secondary ml-2">{{session()->has('cart') ?  count(session()->get('cart')) : 0}}</span>
                         </a>
                     </li>
 

@@ -112,10 +112,10 @@ class LoginController extends Controller
 
     public function owner()
     {
-        if(env('DB_DATABASE') == null)
-        {
-            return view('welcome');
-        }
+//        if(env('DB_DATABASE') == null)
+//        {
+//            return view('welcome');
+//        }
         if(Auth::check())
         {
             Auth::logout();

@@ -21,8 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +248,9 @@
       <workItem from="1638710963333" duration="1916000" />
       <workItem from="1638714907919" duration="595000" />
       <workItem from="1638804559029" duration="3421000" />
-      <workItem from="1638808288936" duration="4665000" />
+      <workItem from="1638808288936" duration="4692000" />
+      <workItem from="1638844857433" duration="3845000" />
+      <workItem from="1638890797935" duration="2647000" />
     </task>
     <servers />
   </component>
@@ -288,18 +297,18 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638636859726">
+    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638893360211">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638636859726" />
-    <state x="339" y="160" key="run.anything.popup" timestamp="1638690301071">
+    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638893360211" />
+    <state x="339" y="160" width="672" height="677" key="run.anything.popup" timestamp="1638891762382">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638690301071" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638806940430">
+    <state x="339" y="160" width="672" height="677" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638891762382" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638893175802">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638806940430" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638893175802" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

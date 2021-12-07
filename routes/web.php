@@ -314,12 +314,14 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     Route::get('/product/delete/{id}', 'owner\ProductController@destroy');
 
     // Market place
-    Route::get('/market-place', 'owner\MarketPlaceController@index');
-    Route::any('/checkout', 'owner\MarketPlaceController@checkout')->name('checkout');
+    Route::get('/market-place', 'owner\MarketPlaceController@index')->name('market_place');
+    Route::post('/checkout', 'owner\MarketPlaceController@checkout')->name('checkout');
     Route::get('add-to-cart/{id}', [MarketPlaceController::class, 'addToCart'])->name('add.to.cart');
-    Route::get('cart', [MarketPlaceController::class, 'show_cart']);
+    Route::get('cart', [MarketPlaceController::class, 'show_cart'])->name('owner_show_cart');
     Route::get('remove-from-cart/{id}', [MarketPlaceController::class, 'remove'])->name('remove.from.cart');
     Route::patch('update-cart', [MarketPlaceController::class, 'update'])->name('update.cart');
+    Route::get('cart-success-url', 'owner\MarketPlaceController@successRedirect')->name('cart-success-url');
+    Route::get('cart-cancel_url', 'owner\MarketPlaceController@cancelRedirect')->name('cart-cancel-url');
 
     // Product
     Route::get('/orders', 'owner\OrderController@index')->name('owner_order');

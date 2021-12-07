@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\owner;
 
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\Product;
+use Auth;
 use Illuminate\Http\Request;
 use Stripe\Checkout\Session;
 use Stripe\PaymentIntent;
@@ -19,32 +21,60 @@ class MarketPlaceController extends Controller
 
 
     public function checkout(Request $request){
-        \Stripe\Stripe::setApiKey('sk_test_51K2yYvAwQFVC9X9FIJ6jlHmLoCDc4OGLIeUvGJTjeuZ42iOa4sTDgrDpzzg933A1ITUi09pwXsgdzpPpcyDrC1a100yIJLjLgp');
-        $session = \Stripe\Checkout\Session::create([
-            'payment_method_types' => ['card'],
-            'line_items' => [
-                [
-                    'name' => "BBBB",
-                    'currency' => "USD",
-                    'amount' =>  10 * 100,
-                    'quantity' => 1,
-                ],  [
-                    'name' => "AAAA",
-                    'currency' => "USD",
-                    'amount' =>  20 * 100,
-                    'quantity' => 2,
-                ],  [
-                    'name' => "CCCCC",
-                    'currency' => "USD",
-                    'amount' =>  30 * 100,
-                    'quantity' => 3,
-                ]],
-            'mode' => 'payment',
-            'success_url' => 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => 'https://example.com/cancel',
-        ]);
+        $carts = session()->get('cart', []);
+        $orders = [];
+        if(session()->get('cart')) {
+            $name = $request->name;
+            $contact = $request->contact;
+            $city = $request->city;
+            $state = $request->state;
+            $country = $request->country;
+            $address = $request->address;
+            \Stripe\Stripe::setApiKey('sk_test_51K2yYvAwQFVC9X9FIJ6jlHmLoCDc4OGLIeUvGJTjeuZ42iOa4sTDgrDpzzg933A1ITUi09pwXsgdzpPpcyDrC1a100yIJLjLgp');
+            $items = array();
+            foreach ($carts as $cart){
+                $product = Product::find($cart['id']);
+                $order = new Order();
+                $order->name = $name;
+                $order->address = $address;
+                $order->contact = $contact;
+                $order->city = $city;
+                $order->state = $state;
+                $order->country = $country;
+                $order->payment_id = "";
+                $order->tracking_no = "";
+                $order->product_id = $cart['id'];
+                $order->unit_price = $cart['price'];
+                $order->total_price = $cart['price'] * $cart['quantity'];
+                $order->quantity = $cart['quantity'];
+                $order->user_id = Auth::user()->id;
+                $order->is_admin_order = 1;
+                $order->salon_id = $product->salon->salon_id ?? 0;
+                $order->order_status = 0;
+                $order->save();
 
-        return redirect( $session->url);
+                $orders[] = $order->id;
+
+                $item = array();
+                $item['name'] = $cart['name'];
+                $item['quantity'] = $cart['quantity'];
+                $item['amount'] = $cart['price'] * 100;
+                $item['currency'] = 'USD';
+                $items[] = $item;
+            }
+            $orders = serialize($orders);
+            $session = \Stripe\Checkout\Session::create([
+                'payment_method_types' => ['card'],
+                'line_items' => $items,
+                'mode' => 'payment',
+                'success_url' => route('cart-success-url').'?ids='.$orders,
+                'cancel_url' => route('cart-cancel-url').'?ids='.$orders,
+            ]);
+            return redirect( $session->url);
+        }
+        else{
+            return redirect()->back();
+        }
     }
 
     public function addToCart($id){
@@ -92,8 +122,35 @@ class MarketPlaceController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
-            session()->flash('success', 'Cart updated successfully');
+            session()->flash('success_message', 'Cart updated successfully');
         }
+    }
+
+
+    public function successRedirect(Request $request){
+        $orders = $request->ids;
+        $orders = unserialize($orders);
+        foreach ($orders as $id){
+            $order = Order::find($id);
+            if($order){
+                $order->order_status = 1;
+                $order->save();
+            }
+        }
+        session()->put('cart',[]);
+        return redirect()->route('market_place')->with('success_message', 'Order place successfully ');
+    }
+
+    public function cancelRedirect(Request $request){
+        $orders = $request->ids;
+        $orders = unserialize($orders);
+        foreach ($orders as $id){
+            $order = Order::find($id);
+            if($order){
+                $order->delete();
+            }
+        }
+        return redirect()->route('owner_show_cart')->with('error_message', 'Wrong card info, please try with correct info');
     }
 
 }

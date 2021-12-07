@@ -15,22 +15,23 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->text('address');
-            $table->text('contact');
-            $table->text('city');
-            $table->text('state');
-            $table->text('country');
-            $table->text('payment_id');
+            $table->text('name')->nullable();
+            $table->text('address')->nullable();
+            $table->text('contact')->nullable();
+            $table->text('city')->nullable();
+            $table->text('state')->nullable();
+            $table->text('country')->nullable();
+            $table->text('payment_id')->nullable();
             $table->text('tracking_no')->nullable();
             $table->bigInteger('order_status_id')->default(1);
-            $table->bigInteger('product_id');
-            $table->bigInteger('unit_price');
+            $table->bigInteger('product_id')->nullable();
+            $table->bigInteger('unit_price')->nullable();
             $table->bigInteger('total_price')->nullable();
-            $table->bigInteger('quantity');
-            $table->bigInteger('user_id');
-            $table->bigInteger('salon_id');
+            $table->bigInteger('quantity')->nullable();
+            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('salon_id')->nullable();
             $table->boolean('is_admin_order')->default(false);
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

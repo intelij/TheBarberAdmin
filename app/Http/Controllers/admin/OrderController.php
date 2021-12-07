@@ -29,7 +29,7 @@ class OrderController extends Controller
             }
         }
 
-        $orders = $orders->orderBy('orders.id','desc')->paginate(25);
+        $orders = $orders->where('order_status',1)->orderBy('orders.id','desc')->paginate(25);
         $order_status = OrderStatus::all();
         $salons = Salon::all();
         return view('admin.order.index', compact('orders', 'order_status', 'salons'));
