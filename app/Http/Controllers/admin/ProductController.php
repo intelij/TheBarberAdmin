@@ -157,13 +157,13 @@ class ProductController extends Controller
     }
 
     public function apiProductList($salon_id){
-        $products = Product::where('salon_id',$salon_id)->get();
+        $products = Product::where('salon_id',$salon_id)->where('is_active',1)->get();
         $data = ProductResource::collection($products);
         return response()->json(['msg' => 'Product list', 'data' => $data, 'success' => true], 200);
     }
 
     public function apiProductDetails($id){
-        $product = Product::find($id);
+        $product = Product::where('id', $id)->where('is_active',1)->get()->first();
         if($product) {
             return response()->json(['msg' => 'Product details', 'data' => new ProductResource($product), 'success' => true], 200);
         }

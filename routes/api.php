@@ -74,7 +74,8 @@ Route::middleware('auth:api')->group(function()
     Route::get('/payment_gateway', 'api\UserApiController@payment_gateway');
 
     Route::post('/checkout/{amount}', 'api\OrderController@stripe_payment');
-    Route::post('/order', 'api\OrderController@order');
+    Route::post('/place-order', 'api\OrderController@placeOrder');
+    Route::get('orders-list', 'api\OrderController@ordersList');
 
 
 });

@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ImageCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ImageResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_29_214206_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/OrderResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/OrderResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +247,8 @@
       <workItem from="1638804559029" duration="3421000" />
       <workItem from="1638808288936" duration="4692000" />
       <workItem from="1638844857433" duration="3845000" />
-      <workItem from="1638890797935" duration="2647000" />
+      <workItem from="1638890797935" duration="3119000" />
+      <workItem from="1638894677555" duration="2487000" />
     </task>
     <servers />
   </component>
@@ -273,10 +271,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1638208257195">
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1638896971648">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1638208257195" />
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1638896971648" />
     <state x="92" y="92" width="1182" height="536" key="DiffContextDialog" timestamp="1638461311426">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -305,10 +303,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" width="672" height="677" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638891762382" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638893175802">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1638896840414">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638893175802" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1638896840414" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -321,15 +319,6 @@
             <option name="methodName" value="update" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php</url>
-          <line>40</line>
-          <properties>
-            <option name="className" value="\App\Http\Controllers\admin\ProductController" />
-            <option name="methodName" value="store" />
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/owner/product/create.blade.php</url>
@@ -355,10 +344,6 @@
           <url>file://$PROJECT_DIR$/resources/views/owner/product/show.blade.php</url>
           <line>17</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php</url>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/owner/pages/product.blade.php</url>

@@ -23,7 +23,7 @@ class ProductResource extends JsonResource
             "status" => $this->status,
             "price" => $this->price,
             "quantity" => $this->quantity,
-            "image" => asset('storage/images/product/'.$this->images[0]->image_url ?? "")
+            "image" => ImageResource::collection($this->images)
         ];
     }
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Resources\OrderResource;
 use App\Order;
+use App\OrderStatus;
+use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\StripeInitiatePayment;
@@ -42,7 +44,7 @@ class OrderController extends Controller
         ]);
     }
 
-    public function order(Request $request){
+    public function placeOrder(Request $request){
         $request->validate([
             'name' => 'required',
             'address' => 'required',
@@ -50,11 +52,12 @@ class OrderController extends Controller
             'city' => 'required',
             'state' => 'required',
             'country' => 'required',
-            'payment_id' => 'required',
             'product_id' => 'required',
             'price' => 'required',
             'quantity' => 'required',
         ]);
+        $product = Product::find($request->product_id);
+
 
         $order =new Order();
         $order->name = $request->name;
@@ -63,16 +66,37 @@ class OrderController extends Controller
         $order->city = $request->city;
         $order->state = $request->state;
         $order->country = $request->country;
-        $order->payment_id = $request->payment_id;
+        $order->payment_id = $request->payment_id??0;
         $order->product_id = $request->product_id;
-        $order->price = $request->price;
+        $order->unit_price   = $request->price;
+        $order->total_price = $order->price *  $order->quantity;
         $order->order_status_id = 1;
         $order->quantity = $request->quantity;
         $order->user_id = Auth::user()->id;
+        $order->order_status = 1;
+        $order->salon_id = $product->salon_id ?? 0;
+        $order->is_admin_order = 0;
         $order->save();
 
         return response()->json(['msg' => 'Order place', 'data' => new OrderResource($order), 'success' => true], 200);
 
     }
 
+    public function ordersList(){
+        $orders = new Order();
+        if(isset($_GET['status']) && !empty($_GET['status'])){
+            $status = $_GET['status'];
+            $orders = $orders->where('order_status_id', $status);
+        }
+        $orders = $orders
+            ->where('order_status',1)
+            ->where("is_admin_order",0)
+            ->where('user_id', Auth::user()->id)
+            ->orderBy('orders.id','desc')
+            ->get();
+        $order_status = OrderStatus::all();
+
+        return response()->json(['msg' => 'Order list', 'data' => OrderResource::collection($orders), 'success' => true], 200);
+
+    }
 }
