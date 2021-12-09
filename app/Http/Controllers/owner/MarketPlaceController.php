@@ -61,6 +61,9 @@ class MarketPlaceController extends Controller
                 $item['amount'] = $cart['price'] * 100;
                 $item['currency'] = 'USD';
                 $items[] = $item;
+
+                $product->quantity = $product->quantity - $cart['quantity'];
+                $product->save();
             }
             $orders = serialize($orders);
             $session = \Stripe\Checkout\Session::create([
@@ -96,7 +99,7 @@ class MarketPlaceController extends Controller
         }
 
         session()->put('cart', $cart);
-        return redirect()->back()->with('success_message', 'Product added to cart successfully!');
+        return redirect()->route('owner_show_cart')->with('success_message', 'Product added to cart successfully!');
     }
 
     public function show_cart(){
@@ -146,6 +149,9 @@ class MarketPlaceController extends Controller
         $orders = unserialize($orders);
         foreach ($orders as $id){
             $order = Order::find($id);
+            $product = Product::find($order->prodcut_id);
+            $product->quantity = $product->quantity + $order->quantity;
+            $product->save();
             if($order){
                 $order->delete();
             }

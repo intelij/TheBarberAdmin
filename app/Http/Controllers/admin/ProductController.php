@@ -157,7 +157,7 @@ class ProductController extends Controller
     }
 
     public function apiProductList($salon_id){
-        $products = Product::where('salon_id',$salon_id)->where('is_active',1)->get();
+        $products = Product::where('salon_id',$salon_id)->where('quantity','>',0)->where('is_active',1)->get();
         $data = ProductResource::collection($products);
         return response()->json(['msg' => 'Product list', 'data' => $data, 'success' => true], 200);
     }

@@ -57,7 +57,8 @@ class OrderController extends Controller
             'quantity' => 'required',
         ]);
         $product = Product::find($request->product_id);
-
+        $product->quantity = $product->quantity -  $request->quantity;
+        $product->save();
 
         $order =new Order();
         $order->name = $request->name;
@@ -69,7 +70,7 @@ class OrderController extends Controller
         $order->payment_id = $request->payment_id??0;
         $order->product_id = $request->product_id;
         $order->unit_price   = $request->price;
-        $order->total_price = $order->price *  $order->quantity;
+        $order->total_price = $request->price *  $request->quantity;
         $order->order_status_id = 1;
         $order->quantity = $request->quantity;
         $order->user_id = Auth::user()->id;

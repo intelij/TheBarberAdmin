@@ -156,6 +156,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function()
     Route::post('/report/user/filter', 'admin\ReportController@user_filter');
     Route::get('/report/salon/revenue', 'admin\ReportController@salonrevenue');
     Route::post('/report/salon/revenue/filter', 'admin\ReportController@salonrevenue_filter');
+    Route::get('/report/general', 'admin\ReportController@revenue_general')->name('admin_report_general');
 
     //settings
     Route::get('/settings', 'admin\SettingController@index');
@@ -263,6 +264,7 @@ Route::prefix('owner')->middleware(['auth','owner'])->group(function()
     // Reports
     Route::get('/report/revenue', 'owner\ReportController@revenue');
     Route::post('/report/revenue/filter', 'owner\ReportController@revenue_filter');
+    Route::get('/report/general', 'owner\ReportController@revenue_general');
     Route::get('/report/user', 'owner\ReportController@user');
     Route::post('/report/user/filter', 'owner\ReportController@user_filter');
 

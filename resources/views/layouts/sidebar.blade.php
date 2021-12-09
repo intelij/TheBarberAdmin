@@ -169,6 +169,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('admin/report/salon/revenue*')  ? 'active_text' : ''}}" href="{{url('admin/report/salon/revenue')}}">{{__('Salon Revenue Report')}}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('admin/report/general*')  ? 'active_text' : ''}}" href="{{url('admin/report/general')}}">{{ __('General Report') }}</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -292,6 +295,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('owner/report/revenue*')  ? 'active_text' : ''}}" href="{{url('owner/report/revenue')}}">{{ __('Revenue Report') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('owner/report/general*')  ? 'active_text' : ''}}" href="{{url('owner/report/general')}}">{{ __('General Report') }}</a>
                                 </li>
                             </ul>
                         </div>
