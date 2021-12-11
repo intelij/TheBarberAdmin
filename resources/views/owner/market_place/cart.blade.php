@@ -113,8 +113,6 @@
                     <div class="card-header border-0">
                         <span class="h3">{{__('Cart')}}</span>
                     </div>
-                    <div class="card-header border-0 text-center">
-                    </div>
                     <form class="form-horizontal form" action="{{route('checkout')}}" method="post">
                         @csrf
                         <div class="card shadow">
@@ -125,35 +123,30 @@
                                             <div class="p-20">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        {{-- title --}}
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="title">{{__('Name')}}</label>
                                                             <input required type="text" value="{{old('name')}}" name="name" id="name" class="form-control" placeholder="{{__('Name')}}" autofocus>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        {{-- title --}}
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="title">{{__('Phone no')}}</label>
                                                             <input required type="text" value="{{old('contact')}}" name="contact" id="contact" class="form-control" placeholder="{{__('Phone no')}}" >
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        {{-- title --}}
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="title">{{__('City')}}</label>
                                                             <input required type="text" value="{{old('city')}}" name="city" id="city" class="form-control" placeholder="{{__('City')}}" >
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        {{-- title --}}
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="title">{{__('State')}}</label>
                                                             <input required type="text" value="{{old('state')}}" name="state" id="state" class="form-control" placeholder="{{__('State')}}" >
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        {{-- title --}}
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="title">{{__('Country')}}</label>
                                                             <input required type="text" value="{{old('country')}}" name="country" id="country" class="form-control" placeholder="{{__('Country')}}" >

@@ -19,7 +19,12 @@ class ProductController extends Controller
     public function index(){
         $products = new Product();
         if(isset($_GET['salon']) && !empty($_GET['salon'])){
-            $products = $products->where('salon_id', $_GET['salon']);
+            if($_GET['salon'] == 'own'){
+                $products = $products->where('is_owner_product', 1);
+            }
+            else{
+                $products = $products->where('salon_id', $_GET['salon'])->where('is_owner_product', 0);
+            }
         }
         if(isset($_GET['status']) && !empty($_GET['status'])){
             $status = $_GET['status'] == 'active' ? 1 : 0;
@@ -54,12 +59,12 @@ class ProductController extends Controller
         $product = new Product();
         $product->title = $request->title;
         $product->description = $request->description;
-        $product->salon_id = $request->salon_id;
+        $product->salon_id = $request->salon_id == "own" ? NULL : $request->salon_id;
         $product->category_id = $request->category_id;
         $product->is_active = $request->is_active;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
-        $product->is_owner_product = $request->salon_id == Auth::user()->id ? true : false;
+        $product->is_owner_product = $request->salon_id == "own" ? true : false;
         $product->save();
 
         foreach($request->file('image') as $image){
@@ -139,12 +144,12 @@ class ProductController extends Controller
 
         $product->title = $request->title;
         $product->description = $request->description;
-        $product->salon_id = $request->salon_id;
+        $product->salon_id = $request->salon_id == "own" ? NULL : $request->salon_id;
         $product->category_id = $request->category_id;
         $product->is_active = $request->is_active;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
-        $product->is_owner_product = $request->salon_id == Auth::user()->id ? true : false;
+        $product->is_owner_product = $request->salon_id == "own" ? true : false;
         $product->save();
 
         return redirect('/admin/product');
@@ -157,13 +162,13 @@ class ProductController extends Controller
     }
 
     public function apiProductList($salon_id){
-        $products = Product::where('salon_id',$salon_id)->where('quantity','>',0)->where('is_active',1)->get();
+        $products = Product::where('salon_id',$salon_id)->where('quantity','>',0)->where('is_owner_product',0)->where('is_active',1)->get();
         $data = ProductResource::collection($products);
         return response()->json(['msg' => 'Product list', 'data' => $data, 'success' => true], 200);
     }
 
     public function apiProductDetails($id){
-        $product = Product::where('id', $id)->where('is_active',1)->get()->first();
+        $product = Product::where('id', $id)->where('quantity','>',0)->where('is_owner_product',0)->where('is_active',1)->get()->first();
         if($product) {
             return response()->json(['msg' => 'Product details', 'data' => new ProductResource($product), 'success' => true], 200);
         }

@@ -55,7 +55,7 @@
                                         <td>{{$product->title}}</td>
                                         <td>{{$product->category->name??""}}</td>
                                         <td>{{$product->salon->name??"Owner product"}}</td>
-                                        <td>{{$product->price}}</td>
+                                        <td>${{$product->price}}</td>
                                         <td>{{$product->quantity}}</td>
                                         <td>
                                             <label class="custom-toggle">

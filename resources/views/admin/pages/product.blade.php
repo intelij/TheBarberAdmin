@@ -23,7 +23,7 @@
                                 <div class="form-group">
                                 <select class="form-control" name="salon" id="salon" onchange="this.form.submit()">
                                     <option value="">Select salon</option>
-                                    <option value="{{Auth::user()->id}}">Own product</option>
+                                    <option value="own">Own product</option>
                                     @foreach($salons as $salon)
                                         <option value="{{$salon->salon_id}}">{{$salon->name}}</option>
                                     @endforeach
@@ -73,7 +73,7 @@
                                     <td>{{$product->title}}</td>
                                     <td>{{$product->category->name??""}}</td>
                                     <td>{{$product->salon->name??"Owner product"}}</td>
-                                    <td>{{$product->price}}</td>
+                                    <td>${{$product->price}}</td>
                                     <td>{{$product->quantity}}</td>
                                     <td>
                                         <label class="custom-toggle">

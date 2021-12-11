@@ -18,12 +18,26 @@
                         <div class="row">
                             <div class="col-4">
                                 <form method="get" action="{{route('owner_order')}}">
+                                    <input type="hidden" value="{{isset($_GET['show_product']) ? $_GET['show_product'] : ""}}" />
                                     <div class="form-group">
                                         <select class="form-control" name="status" id="status" onchange="this.form.submit()">
                                             <option value="">Select product status</option>
                                             @foreach($order_status as $order_sta)
                                                 <option value="{{$order_sta->id}}">{{$order_sta->value}}</option>
                                             @endforeach
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-4">
+                                <form method="get" action="{{route('owner_order')}}">
+                                    <input type="hidden" value="{{isset($_GET['status']) ? $_GET['status'] : ""}}" />
+                                    <div class="form-group">
+                                        <select class="form-control" name="show_product" id="show_product" onchange="this.form.submit()">
+                                            <option value="">All products</option>
+                                            <option value="own">My purchase order</option>
+                                            <option value="other">Other</option>
                                         </select>
                                     </div>
                                 </form>
@@ -49,12 +63,12 @@
                             @if (count($orders) != 0)
                                 @foreach ($orders as $key => $order)
                                     <tr>
-                                        <th>{{$key}}</th>
+                                        <th>{{$key + 1}}</th>
                                         <th><img src="{{$order->product->first_image??""}}"
                                                  style="width: 50px; height: 50px; "/></th>
                                         <td>{{$order->product->title??""}}</td>
                                         <td>{{$order->product->category->name??""}}</td>
-                                        <td>{{$order->total_price}}</td>
+                                        <td>${{$order->total_price}}</td>
                                         <td>{{$order->product->quantity}}</td>
                                         <td>
                                             {{$order->status->value??""}}

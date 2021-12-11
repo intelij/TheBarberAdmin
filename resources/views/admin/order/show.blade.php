@@ -44,7 +44,7 @@
                                     <p>Quantity: {{$order->quantity}}</p>
                                 </div>
                                 <div class="col-6">
-                                    <p>Price: {{$order->total_price}}</p>
+                                    <p>Price: ${{$order->total_price}}</p>
                                 </div>
                                 <div class="col-12 text-center">
                                     <p>Order Status: {{$order->status->value ?? ""}}</p>

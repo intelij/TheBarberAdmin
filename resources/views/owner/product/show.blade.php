@@ -32,7 +32,7 @@
                             <p>{{$product->description}}</p>
                             <p>Category: {{$product->category->name}}</p>
                             <p>Salon: {{$product->salon->name}}</p>
-                            <p>Price: {{$product->price}}</p>
+                            <p>Price: ${{$product->price}}</p>
                             <p>Quantity: {{$product->quantity}}</p>
                             <p>Status: {{$product->status}}</p>
                             <hr class="my-4"/>

@@ -17,10 +17,15 @@ class OrderController extends Controller
             $status = $_GET['status'];
             $orders = $orders->where('order_status_id', $status);
         }
+        if(isset($_GET['show_product']) && !empty($_GET['show_product'])){
+            if($_GET['show_product'] == 'own'){
+                $orders = $orders->where('is_admin_order',1);
+            }
+            else{
+                $orders = $orders->where('is_admin_order',0)->where('salon_id', Auth::user()->salon_id);
+            }
+        }
         $orders = $orders
-            ->where('order_status',1)
-            ->where("is_admin_order",0)
-            ->where('salon_id', Auth::user()->salon_id)
             ->orderBy('orders.id','desc')
             ->paginate(25);
         $order_status = OrderStatus::all();

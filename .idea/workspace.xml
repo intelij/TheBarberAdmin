@@ -20,16 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec950cc-db18-4c4f-9015-e52c74070bae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/report/revenue_general.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/owner/report/revenue_general.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ReportController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/MarketPlaceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/report/revenue_general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/report/revenue_general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/order/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/order/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/pages/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/owner/report/revenue_general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/owner/report/revenue_general.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +263,8 @@
       <workItem from="1638890797935" duration="3119000" />
       <workItem from="1638894677555" duration="2520000" />
       <workItem from="1638978661277" duration="1942000" />
-      <workItem from="1639066068839" duration="6128000" />
+      <workItem from="1639066068839" duration="6192000" />
+      <workItem from="1639216258261" duration="4171000" />
     </task>
     <servers />
   </component>
@@ -275,10 +287,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1639070658652">
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1639219097251">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1639070658652" />
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1639219097251" />
     <state x="92" y="92" width="1182" height="536" key="DiffContextDialog" timestamp="1638461311426">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -299,31 +311,22 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="333" y="29" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.720@0.0.1366.720" timestamp="1638242336368" />
-    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1638979852504">
+    <state x="514" y="0" width="585" height="720" key="find.popup" timestamp="1639217614504">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1638979852504" />
+    <state x="514" y="0" width="585" height="720" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1639217614504" />
     <state x="339" y="160" width="672" height="677" key="run.anything.popup" timestamp="1638979524849">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="339" y="160" width="672" height="677" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1638979524849" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1639070906262">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1639220275413">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1639070906262" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1639220275413" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/owner/ProductController.php</url>
-          <line>140</line>
-          <properties>
-            <option name="className" value="\App\Http\Controllers\owner\ProductController" />
-            <option name="methodName" value="update" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/owner/product/create.blade.php</url>
           <line>68</line>
@@ -353,6 +356,11 @@
           <url>file://$PROJECT_DIR$/resources/views/owner/pages/product.blade.php</url>
           <line>33</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/owner/market_place/cart.blade.php</url>
+          <line>211</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

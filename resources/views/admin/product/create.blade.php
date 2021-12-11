@@ -56,7 +56,7 @@
                                                 <div class="form-group">
                                                     <label class="form-control-label">{{__('Salon')}}</label>
                                                     <select class="form-control select2" name="salon_id" id="salon_id" data-placeholder='{{ __("-- Select Salon --")}}' placeholder='{{ __("-- Select Salon --")}}' >
-                                                        <option  value="{{$user_id}}" {{ old('salon_id') == $user_id? 'selected':'' }}>Own Product</option>
+                                                        <option  value="own" {{ old('salon_id') == "own" ? 'selected':'' }}>Own Product</option>
 
                                                     @foreach ($salons as $salon)
                                                             <option  value="{{$salon->salon_id}}" {{ old('salon_id') == $salon->salon_id? 'selected':'' }}>{{$salon->name}}</option>
@@ -97,7 +97,7 @@
                                                 {{-- Price --}}
                                                 <div class="form-group">
                                                     <label for="price" class="form-control-label">{{__('Price')}}</label>
-                                                    <input type="number" value="{{old('price')}}" class="form-control" name="price" id="price" placeholder="{{__('Price')}}" >
+                                                    <input type="number" min="0" value="{{old('price')}}" class="form-control" name="price" id="price" placeholder="{{__('Price')}}" >
                                                     @error('price')
                                                         <div class="invalid-div">{{ $message }}</div>
                                                     @enderror
@@ -106,7 +106,7 @@
                                                 {{-- Quantity --}}
                                                 <div class="form-group">
                                                     <label for="quantity" class="form-control-label">{{__('Quantity')}}</label>
-                                                    <input type="number" value="{{old('quantity')}}" class="form-control" name="quantity" id="quantity" placeholder="{{__('Quantity')}}" >
+                                                    <input type="number" min="0" value="{{old('quantity')}}" class="form-control" name="quantity" id="quantity" placeholder="{{__('Quantity')}}" >
                                                     @error('quantity')
                                                     <div class="invalid-div">{{ $message }}</div>
                                                     @enderror

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Resources\OrderResource;
+use App\Http\Resources\ProductResource;
 use App\Order;
 use App\OrderStatus;
 use App\Product;
@@ -56,10 +57,13 @@ class OrderController extends Controller
             'price' => 'required',
             'quantity' => 'required',
         ]);
-        $product = Product::find($request->product_id);
+        $product = Product::where('id',$request->product_id)->where('quantity','>',$request->quantity )->where('is_owner_product',0)->where('is_active',1)->get()->first();
+        if(!$product){
+            return response()->json(['msg' => 'Product not found', 'data' => '', 'success' => true], 404);
+
+        }
         $product->quantity = $product->quantity -  $request->quantity;
         $product->save();
-
         $order =new Order();
         $order->name = $request->name;
         $order->address = $request->address;
@@ -97,7 +101,7 @@ class OrderController extends Controller
             ->get();
         $order_status = OrderStatus::all();
 
-        return response()->json(['msg' => 'Order list', 'data' => OrderResource::collection($orders), 'success' => true], 200);
+        return response()->json(['msg' => 'Order list', 'data' => OrderResource::collection($orders),'order_status' => $order_status, 'success' => true], 200);
 
     }
 }

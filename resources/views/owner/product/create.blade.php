@@ -81,7 +81,7 @@
                                                 {{-- Price --}}
                                                 <div class="form-group">
                                                     <label for="price" class="form-control-label">{{__('Price')}}</label>
-                                                    <input type="number" value="{{old('price')}}" class="form-control" name="price" id="price" placeholder="{{__('Price')}}" >
+                                                    <input type="number" min="0" value="{{old('price')}}" class="form-control" name="price" id="price" placeholder="{{__('Price')}}" >
                                                     @error('price')
                                                         <div class="invalid-div">{{ $message }}</div>
                                                     @enderror
@@ -90,7 +90,7 @@
                                                 {{-- Quantity --}}
                                                 <div class="form-group">
                                                     <label for="quantity" class="form-control-label">{{__('Quantity')}}</label>
-                                                    <input type="number" value="{{old('quantity')}}" class="form-control" name="quantity" id="quantity" placeholder="{{__('Quantity')}}" >
+                                                    <input type="number" min="0" value="{{old('quantity')}}" class="form-control" name="quantity" id="quantity" placeholder="{{__('Quantity')}}" >
                                                     @error('quantity')
                                                     <div class="invalid-div">{{ $message }}</div>
                                                     @enderror

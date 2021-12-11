@@ -29,6 +29,7 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
+        $salon = Salon::where('owner_id', Auth()->user()->id)->first();
         $request->validate([
             'title' => 'bail|required',
             'description' => 'bail|required',
@@ -43,7 +44,7 @@ class ProductController extends Controller
         $product = new Product();
         $product->title = $request->title;
         $product->description = $request->description;
-        $product->salon_id = Auth::user()->id;
+        $product->salon_id = $salon->salon_id;
         $product->category_id = $request->category_id;
         $product->is_active = $request->is_active;
         $product->price = $request->price;
@@ -111,7 +112,6 @@ class ProductController extends Controller
                 $name =  rand(00001,999999). time().'.'. $image->getClientOriginalExtension();
                 $destinationPath = public_path('/storage/images/product');
                 $image->move($destinationPath, $name);
-
                 $product_image = new ProductImage();
                 $product_image->image_url = $name;
                 $product_image->product_id = $product->id;

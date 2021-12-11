@@ -28,7 +28,7 @@
                     <div class="card-header border-0 text-left">
                         <div class="row">
                             <div class="col-4 text-center mb-3">
-                                <span class="h3">Total cash received: </span> {{$total_no_amount}}
+                                <span class="h3">Total cash received: </span> ${{$total_no_amount}}
                             </div>
                             <div class="col-4">
                                 <span class="h3">Total no products: </span> {{$total_no_of_product}}
@@ -38,17 +38,17 @@
                             </div>
                             <div class="col-6">
                                 <span
-                                    class="h3">Total amount from completed order: </span> {{$total_no_amount_completed}}
+                                    class="h3">Total amount from completed order: </span> ${{$total_no_amount_completed}}
                             </div>
                             <div class="col-6">
                                 <span
-                                    class="h3">Total amount from in-progress order : </span> {{$total_no_amount_in_progress}}
+                                    class="h3">Total amount from in-progress order : </span> ${{$total_no_amount_in_progress}}
                             </div>
                             <div class="col-6">
-                                <span class="h3">Total amount from open order: </span> {{$total_no_amount_open}}
+                                <span class="h3">Total amount from open order: </span> ${{$total_no_amount_open}}
                             </div>
                             <div class="col-6">
-                                <span class="h3">Total amount from cancel order : </span> {{$total_no_amount_cancel}}
+                                <span class="h3">Total amount from cancel order : </span> ${{$total_no_amount_cancel}}
                             </div>
                             <div class="col-6">
                                 <span class="h3">Total no of open order : </span> {{$total_no_order_open}}

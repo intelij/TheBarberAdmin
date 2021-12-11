@@ -64,12 +64,12 @@
                             @if (count($orders) != 0)
                                 @foreach ($orders as $key => $order)
                                     <tr>
-                                        <th>{{$key}}</th>
+                                        <th>{{$key + 1}}</th>
                                         <th><img src="{{$order->product->first_image??""}}"
                                                  style="width: 50px; height: 50px; "/></th>
                                         <td>{{$order->product->title??""}}</td>
                                         <td>{{$order->product->category->name??""}}</td>
-                                        <td>{{$order->total_price}}</td>
+                                        <td>${{$order->total_price}}</td>
                                         <td>{{$order->product->quantity}}</td>
                                         <td>
                                             {{$order->status->value??""}}

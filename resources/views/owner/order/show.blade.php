@@ -14,9 +14,7 @@
             @foreach($order->product->images as $image)
                 <div class="col-4">
                     <div class="card">
-                        <img style="width: 100%; height: 150px;" class="card-img-top"
-                             src="{{asset('storage/images/product/'.$image->image_url)}}"
-                             alt="{{$order->product->title}}">
+                        <img style="width: 100%; height: 150px;" class="card-img-top" src="{{asset('storage/images/product/'.$image->image_url)}}" alt="{{$order->product->title}}">
                     </div>
                 </div>
             @endforeach
@@ -24,7 +22,7 @@
         </div>
         <div class="row mt-3">
 
-            <div class="col-xl-8  mb-5 mb-xl-0">
+            <div class="col-xl-8  mb-5 mb-xl-0 ">
                 <div class="card card-profile shadow">
                     <div class="card-body pt-0 pt-md-4">
                         <h3 class="mb-2 text-center">Order info</h3>
@@ -86,7 +84,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4  mb-5 mb-xl-0">
+
+            @if($order->is_admin_order == 0)
+                <div class="col-xl-4  mb-5 mb-xl-0">
                 <div class="card card-profile shadow ">
                     <div class="card-body pt-0 pt-md-4">
                         <h3 class="text-center mb-5">Update order info</h3>
@@ -113,6 +113,7 @@
                     </div>
                 </div>
             </div>
+            @endif
 
         </div>
     </div>

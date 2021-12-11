@@ -14,7 +14,7 @@ use Stripe\Stripe;
 class MarketPlaceController extends Controller
 {
     public function index(){
-        $products = Product::where('is_owner_product',true)->where('quantity', '>' , 0)->paginate(1000);
+        $products = Product::where('is_owner_product',1)->where('is_active',1)->where('quantity', '>' , 0)->paginate(1000);
         return view('owner.market_place.index', compact('products'));
     }
 
