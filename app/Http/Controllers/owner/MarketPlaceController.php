@@ -149,7 +149,7 @@ class MarketPlaceController extends Controller
         $orders = unserialize($orders);
         foreach ($orders as $id){
             $order = Order::find($id);
-            $product = Product::find($order->prodcut_id);
+            $product = Product::find($order->product_id);
             $product->quantity = $product->quantity + $order->quantity;
             $product->save();
             if($order){
