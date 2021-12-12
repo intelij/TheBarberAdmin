@@ -20,14 +20,14 @@ class OrderController extends Controller
 {
     public function stripe_payment($amount)
     {
-        Stripe::setApiKey(env('STRIPE_API_KEY'));
+        Stripe::setApiKey('sk_test_51K2yYvAwQFVC9X9FIJ6jlHmLoCDc4OGLIeUvGJTjeuZ42iOa4sTDgrDpzzg933A1ITUi09pwXsgdzpPpcyDrC1a100yIJLjLgp');
         $customer = Customer::create();
         $ephemeralKey = EphemeralKey::create(
             ['customer' => $customer->id],
             ['stripe_version' => '2020-08-27']
         );
         $paymentIntent = PaymentIntent::create([
-            'amount' => $amount,
+            'amount' => $amount *100 ,
             'currency' => 'usd',
             'customer' => $customer->id,
             'payment_method_types' => ['card'],
